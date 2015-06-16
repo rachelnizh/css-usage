@@ -2,6 +2,13 @@
 ###################
 [Nn]ode_modules/*
 
+# Sass cache and related scss, css files #
+###################
+**/.sass-cache
+**/.sass-cache/*
+*.css
+*.map
+
 # Compiled source #
 ###################
 *.com

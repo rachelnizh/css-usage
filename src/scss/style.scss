@@ -1,0 +1,25 @@
+@import "susy";
+
+//Susy settings
+$susy: (
+  columns: 24,  // The number of columns in your grid
+  gutters: 1/4,
+);
+
+$white: #f7f7f7;
+$blue: #0078d7;
+
+body {
+	@include container(80em);
+	background-color: $white;
+}
+
+ul {
+	@include span(25%);
+}
+
+a {
+	border: 1px solid $blue;
+}
+
+
