@@ -1,25 +1,33 @@
 @import "susy";
 
-//Susy settings
 $susy: (
-  columns: 24,  // The number of columns in your grid
-  gutters: 1/4,
+  columns: 24,
+  gutters: .1,
+  gutter-position: split,
 );
+
+$map: layout(12 .25 inside);
+@include layout($map fluid no-gutters);
 
 $white: #f7f7f7;
 $blue: #0078d7;
+$red: #d02e00;
+$text-primary: #000;
+$text-secondary: rgba(0, 0, 0, .6);
 
-body {
-	@include container(80em);
+.container {
+	@include container;		
 	background-color: $white;
+	border: 1px solid red;
+	color: $text-primary;	
 }
 
-ul {
-	@include span(25%);
+div {
+	height: 50px;
+	background-color: $blue;
+	@include span(6);
 }
 
-a {
-	border: 1px solid $blue;
-}
-
-
+ul li {
+	list-style-type: none;
+} 
