@@ -15,18 +15,48 @@ $red: #d02e00;
 $text-primary: #000;
 $text-secondary: rgba(0, 0, 0, .6);
 
+body {
+	background-color: $white;
+}
+
 .container {
 	@include container;		
-	background-color: $white;
 	border: 1px solid red;
 	color: $text-primary;	
 }
 
-div {
-	height: 50px;
-	background-color: $blue;
-	@include span(6);
+.nav {
+	border: 1px solid blue;
 }
+
+.data {
+	border: 1px solid purple;
+}
+
+@media (min-width: 1083px) {
+	.data {
+		@include span(18 of 24);
+	}
+}
+
+@media (min-width: 1083px) {
+	.nav {
+		@include span(6 of 24);
+	}
+}
+
+// @media (min-width: 767px) {
+// 	.nav {
+// 		@include span(12 of 24);
+// 	}
+// }
+
+// @media (max-width: 539px) {
+// 	.nav {
+// 		@include span(24 of 24);
+// 	}
+// }
+
 
 ul li {
 	list-style-type: none;
