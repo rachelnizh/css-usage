@@ -1,0 +1,1078 @@
+﻿/* Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information. */
+@keyframes WinJS-node-inserted {
+  from {
+    outline-color: #000;
+  }
+  to {
+    outline-color: #001;
+  }
+}
+@keyframes WinJS-opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes WinJS-opacity-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes WinJS-scale-up {
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes WinJS-scale-down {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.85);
+  }
+}
+@keyframes WinJS-default-remove {
+  from {
+    transform: translateX(11px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-default-remove-rtl {
+  from {
+    transform: translateX(-11px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-default-apply {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(11px);
+  }
+}
+@keyframes WinJS-default-apply-rtl {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-11px);
+  }
+}
+@keyframes WinJS-showEdgeUI {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-showPanel {
+  from {
+    transform: translateX(364px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-showPanel-rtl {
+  from {
+    transform: translateX(-364px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-hideEdgeUI {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(-70px);
+  }
+}
+@keyframes WinJS-hidePanel {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(364px);
+  }
+}
+@keyframes WinJS-hidePanel-rtl {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-364px);
+  }
+}
+@keyframes WinJS-showPopup {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-dragSourceEnd {
+  from {
+    transform: translateX(11px) scale(1.05);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-dragSourceEnd-rtl {
+  from {
+    transform: translateX(-11px) scale(1.05);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-enterContent {
+  from {
+    transform: translateY(28px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-exit {
+  from {
+    transform: none;
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-enterPage {
+  from {
+    transform: translateY(28px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-updateBadge {
+  from {
+    transform: translateY(24px);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes WinJS-node-inserted {
+  from {
+    outline-color: #000;
+  }
+  to {
+    outline-color: #001;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-opacity-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-scale-up {
+  from {
+    -webkit-transform: scale(0.85);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-scale-down {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.85);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-default-remove {
+  from {
+    -webkit-transform: translateX(11px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-default-remove-rtl {
+  from {
+    -webkit-transform: translateX(-11px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-default-apply {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: translateX(11px);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-default-apply-rtl {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: translateX(-11px);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-showEdgeUI {
+  from {
+    -webkit-transform: translateY(-70px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-showPanel {
+  from {
+    -webkit-transform: translateX(364px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-showPanel-rtl {
+  from {
+    -webkit-transform: translateX(-364px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-hideEdgeUI {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: translateY(-70px);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-hidePanel {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: translateX(364px);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-hidePanel-rtl {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: translateX(-364px);
+  }
+}
+@-webkit-keyframes -webkit-WinJS-showPopup {
+  from {
+    -webkit-transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-dragSourceEnd {
+  from {
+    -webkit-transform: translateX(11px) scale(1.05);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-dragSourceEnd-rtl {
+  from {
+    -webkit-transform: translateX(-11px) scale(1.05);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-enterContent {
+  from {
+    -webkit-transform: translateY(28px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-exit {
+  from {
+    -webkit-transform: none;
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-enterPage {
+  from {
+    -webkit-transform: translateY(28px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-updateBadge {
+  from {
+    -webkit-transform: translateY(24px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@font-face {
+  font-family: "Segoe UI Command";
+  src: local("Segoe MDL2 Assets");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Symbols";
+  src: url(../fonts/Symbols.ttf);
+}
+.win-type-header,
+.win-h1 {
+  font-size: 46px;
+  font-weight: 200;
+  line-height: 1.216;
+  letter-spacing: 0px;
+}
+.win-type-subheader,
+.win-h2 {
+  font-size: 34px;
+  font-weight: 200;
+  line-height: 1.176;
+}
+.win-type-title,
+.win-h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.167;
+}
+.win-type-subtitle,
+.win-h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.win-type-body,
+.win-h6 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.333;
+}
+.win-type-base,
+.win-h5 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.333;
+}
+.win-type-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.167;
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 200;
+  src: local("Segoe UI Light");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 300;
+  src: local("Segoe UI Semilight");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  src: local("Segoe UI");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 500;
+  src: local("Segoe UI Semibold");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Bold");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Segoe UI Italic");
+}
+@font-face {
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Segoe UI Bold Italic");
+}
+@font-face {
+  font-family: "Microsoft Yahei UI";
+  font-weight: 200;
+  src: local("Microsoft Yahei UI Light");
+}
+@font-face {
+  font-family: "Microsoft Yahei UI";
+  font-weight: 300;
+  src: local("Microsoft Yahei UI");
+}
+@font-face {
+  font-family: "Microsoft Yahei UI";
+  font-weight: 500;
+  src: local("Microsoft Yahei UI");
+}
+@font-face {
+  font-family: "Microsoft Yahei UI";
+  font-weight: 600;
+  src: local("Microsoft Yahei UI Bold");
+}
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  font-weight: 200;
+  src: local("Microsoft JhengHei UI Light");
+}
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  font-weight: 300;
+  src: local("Microsoft JhengHei UI");
+}
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  font-weight: 500;
+  src: local("Microsoft JhengHei UI");
+}
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  font-weight: 600;
+  src: local("Microsoft JhengHei UI Bold");
+}
+.win-type-header:-ms-lang(am, ti),
+.win-type-subheader:-ms-lang(am, ti),
+.win-type-title:-ms-lang(am, ti),
+.win-type-subtitle:-ms-lang(am, ti),
+.win-type-base:-ms-lang(am, ti),
+.win-type-body:-ms-lang(am, ti),
+.win-type-caption:-ms-lang(am, ti),
+.win-h1:-ms-lang(am, ti),
+.win-h2:-ms-lang(am, ti),
+.win-h3:-ms-lang(am, ti),
+.win-h4:-ms-lang(am, ti),
+.win-h5:-ms-lang(am, ti),
+.win-h6:-ms-lang(am, ti),
+.win-button:-ms-lang(am, ti),
+.win-dropdown:-ms-lang(am, ti),
+.win-textbox:-ms-lang(am, ti),
+.win-link:-ms-lang(am, ti),
+.win-textarea:-ms-lang(am, ti) {
+  font-family: "Ebrima", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-subheader:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-title:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-subtitle:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-base:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-body:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-type-caption:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h1:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h2:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h3:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h4:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h5:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-h6:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-button:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-dropdown:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-textbox:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-link:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te),
+.win-textarea:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, sat-Olck, si, srb-Sora, ta, te) {
+  font-family: "Nirmala UI", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(chr-CHER-US),
+.win-type-subheader:-ms-lang(chr-CHER-US),
+.win-type-title:-ms-lang(chr-CHER-US),
+.win-type-subtitle:-ms-lang(chr-CHER-US),
+.win-type-base:-ms-lang(chr-CHER-US),
+.win-type-body:-ms-lang(chr-CHER-US),
+.win-type-caption:-ms-lang(chr-CHER-US),
+.win-h1:-ms-lang(chr-CHER-US),
+.win-h2:-ms-lang(chr-CHER-US),
+.win-h3:-ms-lang(chr-CHER-US),
+.win-h4:-ms-lang(chr-CHER-US),
+.win-h5:-ms-lang(chr-CHER-US),
+.win-h6:-ms-lang(chr-CHER-US),
+.win-button:-ms-lang(chr-CHER-US),
+.win-dropdown:-ms-lang(chr-CHER-US),
+.win-textbox:-ms-lang(chr-CHER-US),
+.win-link:-ms-lang(chr-CHER-US),
+.win-textarea:-ms-lang(chr-CHER-US) {
+  font-family: "Gadugi", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(ja),
+.win-type-subheader:-ms-lang(ja),
+.win-type-title:-ms-lang(ja),
+.win-type-subtitle:-ms-lang(ja),
+.win-type-base:-ms-lang(ja),
+.win-type-body:-ms-lang(ja),
+.win-type-caption:-ms-lang(ja),
+.win-h1:-ms-lang(ja),
+.win-h2:-ms-lang(ja),
+.win-h3:-ms-lang(ja),
+.win-h4:-ms-lang(ja),
+.win-h5:-ms-lang(ja),
+.win-h6:-ms-lang(ja),
+.win-button:-ms-lang(ja),
+.win-dropdown:-ms-lang(ja),
+.win-textbox:-ms-lang(ja),
+.win-link:-ms-lang(ja),
+.win-textarea:-ms-lang(ja) {
+  font-family: "Yu Gothic UI", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-subheader:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-title:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-subtitle:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-base:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-body:-ms-lang(km, lo, th, bug-Bugi),
+.win-type-caption:-ms-lang(km, lo, th, bug-Bugi),
+.win-h1:-ms-lang(km, lo, th, bug-Bugi),
+.win-h2:-ms-lang(km, lo, th, bug-Bugi),
+.win-h3:-ms-lang(km, lo, th, bug-Bugi),
+.win-h4:-ms-lang(km, lo, th, bug-Bugi),
+.win-h5:-ms-lang(km, lo, th, bug-Bugi),
+.win-h6:-ms-lang(km, lo, th, bug-Bugi),
+.win-button:-ms-lang(km, lo, th, bug-Bugi),
+.win-dropdown:-ms-lang(km, lo, th, bug-Bugi),
+.win-textbox:-ms-lang(km, lo, th, bug-Bugi),
+.win-link:-ms-lang(km, lo, th, bug-Bugi),
+.win-textarea:-ms-lang(km, lo, th, bug-Bugi) {
+  font-family: "Leelawadee UI", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(ko),
+.win-type-subheader:-ms-lang(ko),
+.win-type-title:-ms-lang(ko),
+.win-type-subtitle:-ms-lang(ko),
+.win-type-base:-ms-lang(ko),
+.win-type-body:-ms-lang(ko),
+.win-type-caption:-ms-lang(ko),
+.win-h1:-ms-lang(ko),
+.win-h2:-ms-lang(ko),
+.win-h3:-ms-lang(ko),
+.win-h4:-ms-lang(ko),
+.win-h5:-ms-lang(ko),
+.win-h6:-ms-lang(ko),
+.win-button:-ms-lang(ko),
+.win-dropdown:-ms-lang(ko),
+.win-textbox:-ms-lang(ko),
+.win-link:-ms-lang(ko),
+.win-textarea:-ms-lang(ko) {
+  font-family: "Malgun Gothic", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(jv-Java),
+.win-type-subheader:-ms-lang(jv-Java),
+.win-type-title:-ms-lang(jv-Java),
+.win-type-subtitle:-ms-lang(jv-Java),
+.win-type-base:-ms-lang(jv-Java),
+.win-type-body:-ms-lang(jv-Java),
+.win-type-caption:-ms-lang(jv-Java),
+.win-h1:-ms-lang(jv-Java),
+.win-h2:-ms-lang(jv-Java),
+.win-h3:-ms-lang(jv-Java),
+.win-h4:-ms-lang(jv-Java),
+.win-h5:-ms-lang(jv-Java),
+.win-h6:-ms-lang(jv-Java),
+.win-button:-ms-lang(jv-Java),
+.win-dropdown:-ms-lang(jv-Java),
+.win-textbox:-ms-lang(jv-Java),
+.win-link:-ms-lang(jv-Java),
+.win-textarea:-ms-lang(jv-Java) {
+  font-family: "Javanese Text", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(cop-Copt),
+.win-type-subheader:-ms-lang(cop-Copt),
+.win-type-title:-ms-lang(cop-Copt),
+.win-type-subtitle:-ms-lang(cop-Copt),
+.win-type-base:-ms-lang(cop-Copt),
+.win-type-body:-ms-lang(cop-Copt),
+.win-type-caption:-ms-lang(cop-Copt),
+.win-h1:-ms-lang(cop-Copt),
+.win-h2:-ms-lang(cop-Copt),
+.win-h3:-ms-lang(cop-Copt),
+.win-h4:-ms-lang(cop-Copt),
+.win-h5:-ms-lang(cop-Copt),
+.win-h6:-ms-lang(cop-Copt),
+.win-button:-ms-lang(cop-Copt),
+.win-dropdown:-ms-lang(cop-Copt),
+.win-textbox:-ms-lang(cop-Copt),
+.win-link:-ms-lang(cop-Copt),
+.win-textarea:-ms-lang(cop-Copt) {
+  font-family: "Segoe MDL2 Assets", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-subheader:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-title:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-subtitle:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-base:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-body:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-caption:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h1:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h2:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h3:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h4:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h5:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-h6:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-button:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-dropdown:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-textbox:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-link:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-textarea:-ms-lang(zh-CN, zh-Hans, zh-SG) {
+  font-family: "Microsoft YaHei UI", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-type-header:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-subheader:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-title:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-subtitle:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-base:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-body:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-caption:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h1:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h2:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h3:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h4:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h5:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-h6:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-button:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-dropdown:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-textbox:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-link:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-textarea:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO) {
+  font-family: "Microsoft JhengHei UI", "Ebrima", "Nirmala UI", "Gadugi", "Segoe UI Emoji", "Segoe MDL2 Assets", "Symbols", "Yu Gothic UI", "Yu Gothic", "Meiryo UI", "Leelawadee UI", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Segoe UI Historic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Javanese Text", "Cambria Math";
+}
+.win-autosuggestbox {
+  white-space: normal;
+  position: relative;
+  width: 266px;
+  min-width: 265px;
+  min-height: 28px;
+}
+.win-autosuggestbox-flyout {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 100;
+  max-height: 374px;
+  min-height: 44px;
+  overflow: auto;
+  -ms-scroll-chaining: none;
+  touch-action: none;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.333;
+}
+.win-autosuggestbox-flyout-above {
+  bottom: 100%;
+  top: auto;
+}
+.win-autosuggestbox-flyout-above .win-repeater {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.win-autosuggestbox .win-autosuggestbox-input {
+  -ms-ime-align: after;
+  margin: 0;
+  width: 100%;
+}
+.win-autosuggestbox-suggestion-selected {
+  outline-style: dotted;
+  outline-width: 1px;
+}
+.win-autosuggestbox-suggestion-result {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 18px;
+  height: 60px;
+  font-size: 11pt;
+  outline: none;
+}
+.win-autosuggestbox-suggestion-result div {
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.win-autosuggestbox-suggestion-result-text {
+  padding-top: 9px;
+  padding-bottom: 11px;
+  height: 60px;
+  width: 179px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 20px;
+}
+.win-autosuggestbox-suggestion-result-detailed-text {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 22px;
+  /* Some characters get clipped if line height is < 22px. Work around by setting -2 margin. */
+  margin-top: -1px;
+  width: 100%;
+}
+.win-autosuggestbox-suggestion-result img {
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.win-autosuggestbox-suggestion-result img:lang(ar),
+.win-autosuggestbox-suggestion-result img:lang(dv),
+.win-autosuggestbox-suggestion-result img:lang(fa),
+.win-autosuggestbox-suggestion-result img:lang(he),
+.win-autosuggestbox-suggestion-result img:lang(ku-Arab),
+.win-autosuggestbox-suggestion-result img:lang(pa-Arab),
+.win-autosuggestbox-suggestion-result img:lang(prs),
+.win-autosuggestbox-suggestion-result img:lang(ps),
+.win-autosuggestbox-suggestion-result img:lang(sd-Arab),
+.win-autosuggestbox-suggestion-result img:lang(syr),
+.win-autosuggestbox-suggestion-result img:lang(ug),
+.win-autosuggestbox-suggestion-result img:lang(ur),
+.win-autosuggestbox-suggestion-result img:lang(qps-plocm) {
+  margin-right: 0;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 0;
+}
+.win-autosuggestbox-suggestion-query {
+  height: 20px;
+  padding: 11px 0px 13px 12px;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 20px;
+}
+.win-autosuggestbox-suggestion-separator {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 18px;
+  height: 40px;
+  font-size: 11pt;
+}
+.win-autosuggestbox-suggestion-separator hr {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-top: 18px;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+}
+.win-autosuggestbox-suggestion-separator hr:lang(ar),
+.win-autosuggestbox-suggestion-separator hr:lang(dv),
+.win-autosuggestbox-suggestion-separator hr:lang(fa),
+.win-autosuggestbox-suggestion-separator hr:lang(he),
+.win-autosuggestbox-suggestion-separator hr:lang(ku-Arab),
+.win-autosuggestbox-suggestion-separator hr:lang(pa-Arab),
+.win-autosuggestbox-suggestion-separator hr:lang(prs),
+.win-autosuggestbox-suggestion-separator hr:lang(ps),
+.win-autosuggestbox-suggestion-separator hr:lang(sd-Arab),
+.win-autosuggestbox-suggestion-separator hr:lang(syr),
+.win-autosuggestbox-suggestion-separator hr:lang(ug),
+.win-autosuggestbox-suggestion-separator hr:lang(ur),
+.win-autosuggestbox-suggestion-separator hr:lang(qps-plocm) {
+  margin-right: 10px;
+  margin-left: auto;
+}
+.win-autosuggestbox-suggestion-separator div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+.win-autosuggestbox-suggestion-separator div:lang(ar),
+.win-autosuggestbox-suggestion-separator div:lang(dv),
+.win-autosuggestbox-suggestion-separator div:lang(fa),
+.win-autosuggestbox-suggestion-separator div:lang(he),
+.win-autosuggestbox-suggestion-separator div:lang(ku-Arab),
+.win-autosuggestbox-suggestion-separator div:lang(pa-Arab),
+.win-autosuggestbox-suggestion-separator div:lang(prs),
+.win-autosuggestbox-suggestion-separator div:lang(ps),
+.win-autosuggestbox-suggestion-separator div:lang(sd-Arab),
+.win-autosuggestbox-suggestion-separator div:lang(syr),
+.win-autosuggestbox-suggestion-separator div:lang(ug),
+.win-autosuggestbox-suggestion-separator div:lang(ur),
+.win-autosuggestbox-suggestion-separator div:lang(qps-plocm) {
+  margin-left: 10px;
+  margin-right: auto;
+}
+/*
+ASB control animations
+*/
+@keyframes WinJS-flyoutBelowASB-showPopup {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes WinJS-flyoutAboveASB-showPopup {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-flyoutBelowASB-showPopup {
+  from {
+    -webkit-transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@-webkit-keyframes -webkit-WinJS-flyoutAboveASB-showPopup {
+  from {
+    -webkit-transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@media (-ms-high-contrast) {
+  .win-autosuggestbox {
+    border-color: ButtonText;
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  .win-autosuggestbox-disabled {
+    background-color: ButtonFace;
+    border-color: GrayText;
+  }
+  .win-autosuggestbox-disabled input[disabled] {
+    background-color: ButtonFace;
+    color: GrayText;
+    border-color: GrayText;
+  }
+  .win-autosuggestbox-disabled div {
+    color: GrayText;
+    background-color: ButtonFace;
+  }
+  .win-autosuggestbox:-ms-input-placeholder,
+  .win-autosuggestbox::-webkit-input-placeholder,
+  .win-autosuggestbox::-moz-input-placeholder {
+    color: GrayText;
+  }
+  .win-autosuggestbox-flyout {
+    border-color: ButtonText;
+    background-color: ButtonFace;
+  }
+  .win-autosuggestbox-flyout-highlighttext {
+    color: ButtonText;
+  }
+  html.win-hoverable .win-autosuggestbox-suggestion-result:hover,
+  html.win-hoverable .win-autosuggestbox-query:hover {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  html.win-hoverable .win-autosuggestbox-suggestion-result:hover .win-autosuggestbox-flyout-highlighttext,
+  html.win-hoverable .win-autosuggestbox-suggestion-query:hover .win-autosuggestbox-flyout-highlighttext {
+    color: HighlightText;
+  }
+  .win-autosuggestbox-suggestion-query,
+  .win-autosuggestbox-suggestion-result {
+    color: ButtonText;
+  }
+  .win-autosuggestbox-suggestion-selected {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .win-autosuggestbox-suggestion-separator {
+    color: ButtonText;
+  }
+  .win-autosuggestbox-suggestion-separator hr {
+    border-color: ButtonText;
+  }
+  .win-autosuggestbox-suggestion-selected .win-autosuggestbox-flyout-highlighttext {
+    color: HighlightText;
+  }
+}
+/*
+Hide clear button in search box control.
+*/
+.win-searchbox input[type=search]::-ms-clear {
+  display: none;
+}
+.win-searchbox input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+.win-searchbox-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  font-family: "Segoe MDL2 Assets", "Symbols";
+  font-size: 15px;
+  border-style: none;
+  height: 100%;
+  text-align: center;
+}
+.win-searchbox-button:lang(ar),
+.win-searchbox-button:lang(dv),
+.win-searchbox-button:lang(fa),
+.win-searchbox-button:lang(he),
+.win-searchbox-button:lang(ku-Arab),
+.win-searchbox-button:lang(pa-Arab),
+.win-searchbox-button:lang(prs),
+.win-searchbox-button:lang(ps),
+.win-searchbox-button:lang(sd-Arab),
+.win-searchbox-button:lang(syr),
+.win-searchbox-button:lang(ug),
+.win-searchbox-button:lang(ur),
+.win-searchbox-button:lang(qps-plocm) {
+  right: auto;
+  left: 0;
+}
+.win-searchbox-button.win-searchbox-button:before {
+  content: "\E094";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  line-height: 100%;
+}
+@media (-ms-high-contrast) {
+  .win-searchbox-button {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+  html.win-hoverable .win-searchbox-button[disabled=false]:hover {
+    border-color: ButtonText;
+    background-color: HighLight;
+    color: HighLightText;
+  }
+  .win-searchbox-button-input-focus {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+  html.win-hoverable .win-searchbox-button-input-focus:hover {
+    border-color: ButtonText;
+    background-color: HighLight;
+    color: HighLightText;
+  }
+  .win-searchbox-button:active {
+    background-color: ButtonText;
+    color: ButtonFace;
+  }
+}
+.win-autosuggestbox-flyout-highlighttext {
+  color: #4617b4;
+}
+.win-autosuggestbox-suggestion-separator {
+  color: #7a7a7a;
+}
+.win-autosuggestbox-suggestion-separator hr {
+  border-color: #7a7a7a;
+}
+.win-autosuggestbox-suggestion-selected .win-autosuggestbox-flyout-highlighttext {
+  color: #a38bda;
+}
+.win-autosuggestbox-flyout {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+.win-autosuggestbox-suggestion-result:hover:active,
+.win-autosuggestbox-suggestion-query:hover:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.win-searchbox-button {
+  color: rgba(0, 0, 0, 0.4);
+}
+.win-searchbox-button-input-focus {
+  color: rgba(0, 0, 0, 0.4);
+}
+.win-searchbox-button.win-searchbox-button:not(.win-searchbox-button-disabled):hover:active {
+  color: #ffffff;
+}
+html.win-hoverable .win-autosuggestbox-suggestion-result:hover,
+html.win-hoverable .win-autosuggestbox-suggestion-query:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+html.win-hoverable .win-searchbox-button:not(.win-searchbox-button-disabled):hover:active {
+  color: #ffffff;
+}
+.win-ui-dark .win-autosuggestbox-flyout-highlighttext {
+  color: #4617b4;
+}
+.win-ui-dark .win-autosuggestbox-suggestion-separator {
+  color: #7a7a7a;
+}
+.win-ui-dark .win-autosuggestbox-suggestion-separator hr {
+  border-color: #7a7a7a;
+}
+.win-ui-dark .win-autosuggestbox-suggestion-selected .win-autosuggestbox-flyout-highlighttext {
+  color: #a38bda;
+}
+.win-ui-dark .win-autosuggestbox-flyout {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+.win-ui-dark .win-autosuggestbox-suggestion-result:hover:active,
+.win-ui-dark .win-autosuggestbox-suggestion-query:hover:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.win-ui-dark .win-searchbox-button {
+  color: rgba(255, 255, 255, 0.4);
+}
+.win-ui-dark .win-searchbox-button-input-focus {
+  color: rgba(0, 0, 0, 0.4);
+}
+.win-ui-dark .win-searchbox-button.win-searchbox-button:not(.win-searchbox-button-disabled):hover:active {
+  color: #ffffff;
+}
+html.win-hoverable .win-ui-dark .win-autosuggestbox-suggestion-result:hover,
+html.win-hoverable .win-ui-dark .win-autosuggestbox-suggestion-query:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html.win-hoverable .win-ui-dark .win-searchbox-button:not(.win-searchbox-button-disabled):hover:active {
+  color: #ffffff;
+}

@@ -6,7 +6,6 @@
 ###################
 **/.sass-cache
 **/.sass-cache/*
-*.css
 *.map
 
 # Compiled source #
