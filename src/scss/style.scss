@@ -8,6 +8,17 @@ $red: #d02e00;
 $text-primary: #000;
 $text-secondary: rgba(0, 0, 0, .6);
 
+//Fonts
+@font-face {
+	font-family: "Selawik";
+	src: url("../fonts/selawk.woff") format('woff');
+}
+
+@font-face {
+	font-family: "Selawik Semilight";
+	src: url("../fonts/selawksl.woff") format('woff');
+}
+
 //Grid definitions
 $susy: (
   columns: 24,
@@ -20,8 +31,6 @@ $layout1: (
   gutters: 1/4,
   gutter-position: split,
 );
-
-
 
 //Draw the grid
 .container {
@@ -53,7 +62,7 @@ $layout1: (
 //General styles
 body {
 	background-color: $offwhite;
-	font-family: Segoe UI, Selawik, sans-serif;
+	font-family: Selawik, sans-serif;
 }
 
 p, li {
@@ -61,7 +70,7 @@ p, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Segoe UI Semilight, Selawik Semilight, sans-serif;
+	font-family: Selawik Semilight, sans-serif;
 	color: $text-primary;	
 }
 
@@ -91,11 +100,16 @@ ul li {
 			li.active {
 		list-style-type: none;
 		background-color: $blue;
-				a {
-				text-decoration: none;
-				color: $white;
-				}
+			a {
+			text-decoration: none;
+			color: $white;
 			}
+		}
 	} 
 }
 
+.trend-graph {
+	height: 400px;
+	border: 1px solid $text-secondary;
+	text-align: center;
+}
