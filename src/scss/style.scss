@@ -39,12 +39,14 @@ $layout1: (
 }
 
 @media (min-width: 1083px) {
+
 	.nav {
 		@include span(6);
 	}	
 	.main {
 		@include span(18);
 	}
+	
 }
 
 // @media (min-width: 767px) {
@@ -67,6 +69,10 @@ body {
 
 p, li {
 	color: $text-secondary;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

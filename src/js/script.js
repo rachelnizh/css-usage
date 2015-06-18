@@ -28,5 +28,4 @@ var jsondata = '{
 	]
 }'
 
-var obj = JSON.parse(jsondata);
-
+document.getElementById("foo").innerHTML = jsondata.props[0];
