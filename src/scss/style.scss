@@ -1,47 +1,40 @@
 @import "susy";
 
-$susy: (
-  columns: 24,
-  gutters: .1,
-  gutter-position: split,
-);
-
-$map: layout(12 .25 inside);
-@include layout($map fluid no-gutters);
-
-$white: #f7f7f7;
+//Variables
+$white: #fff;
+$offwhite: #f7f7f7;
 $blue: #0078d7;
 $red: #d02e00;
 $text-primary: #000;
 $text-secondary: rgba(0, 0, 0, .6);
 
-body {
-	background-color: $white;
-}
+//Grid definitions
+$susy: (
+  columns: 24,
+  gutters: 1/4,
+  gutter-position: split,
+);
 
+$layout1: (
+  columns: 12,
+  gutters: 1/4,
+  gutter-position: split,
+);
+
+
+
+//Draw the grid
 .container {
-	@include container;		
-	border: 1px solid red;
-	color: $text-primary;	
-}
-
-.nav {
-	border: 1px solid blue;
-}
-
-.data {
-	border: 1px solid purple;
-}
-
-@media (min-width: 1083px) {
-	.data {
-		@include span(18 of 24);
-	}
+	@include container(90%);		
+	background-color: $white;
 }
 
 @media (min-width: 1083px) {
 	.nav {
-		@include span(6 of 24);
+		@include span(6);
+	}	
+	.main {
+		@include span(18);
 	}
 }
 
@@ -57,7 +50,52 @@ body {
 // 	}
 // }
 
+//General styles
+body {
+	background-color: $offwhite;
+	font-family: Segoe UI, Selawik, sans-serif;
+}
+
+p, li {
+	color: $text-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Segoe UI Semilight, Selawik Semilight, sans-serif;
+	color: $text-primary;	
+}
+
+ul {
+	padding: 0px;
+}
 
 ul li {
 	list-style-type: none;
-} 
+}
+
+.nav {
+		ul {
+			li {
+		padding: 5px;
+		list-style-type: none;
+			a {
+			text-decoration: none;
+			color: $blue;
+			}
+		}
+	} 
+}
+
+.nav {
+		ul {
+			li.active {
+		list-style-type: none;
+		background-color: $blue;
+				a {
+				text-decoration: none;
+				color: $white;
+				}
+			}
+	} 
+}
+

@@ -4,33 +4,123 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-<!--     <link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />  -->
+	<link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />
     <link type="text/css" href="external/winjs/ui-light.css" media="all" rel="stylesheet" />
     <script src="external/winjs/ui.js"></script>
   	<script src="external/winjs/base.js"></script>
     <link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" />
-    <script>
-    </script>
 </head>
 <body>
 <div class="container">
 	<div class="nav">
 		<ul>
-			<li><a href="#">Property 1</a></li>
-			<li><a href="#">Property 2</a></li>
-			<li><a href="#">Property 3</a></li>
-			<li><a href="#">Property 4</a></li>
+			<li class="searchbox"> Pretend I am a searchbox	   
+				<div data-win-control="WinJS.UI.AutoSuggestBox" data-win-options="{
+					placeholderText: 'Type a city',
+					onsuggestionsrequested: Sample.suggestionsRequestedHandler,
+					onquerysubmitted: Sample.querySubmittedHandler
+				}"></div>
+			</li>
+			<li><a href="#">align-items</a></li>
+			<li><a href="#">align-self</a></li>
+			<li><a href="#">animation</a></li>
+			<li><a href="#">animation-delay</a></li>
+			<li><a href="#">animation-direction</a></li>
+			<li><a href="#">animation-duration</a></li>
+			<li><a href="#">animation-fill-mode</a></li>
+			<li><a href="#">animation-iteration-count</a></li>
+			<li><a href="#">animation-name</a></li>
+			<li><a href="#">animation-play-state</a></li>
+			<li><a href="#">animation-timing-function</a></li>
+			<li><a href="#">backface-visibility</a></li>
+			<li><a href="#">background</a></li>
+			<li><a href="#">background-attachment</a></li>
+			<li><a href="#">background-clip</a></li>
+			<li><a href="#">background-color</a></li>
+			<li><a href="#">background-image</a></li>
+			<li><a href="#">background-origin</a></li>
+			<li><a href="#">background-position</a></li>
+			<li><a href="#">background-repeat</a></li>
+			<li><a href="#">background-size</a></li>
+			<li><a href="#">border</a></li>
+			<li><a href="#">border-bottom</a></li>
+			<li><a href="#">border-bottom-color</a></li>
+			<li><a href="#">border-bottom-left-radius</a></li>
+			<li><a href="#">border-bottom-right-radius</a></li>
+			<li><a href="#">border-bottom-style</a></li>
+			<li><a href="#">border-bottom-width</a></li>
+			<li><a href="#">border-collapse</a></li>
+			<li><a href="#">border-color</a></li>
+			<li><a href="#">border-image</a></li>
+			<li><a href="#">border-image-outset</a></li>
+			<li><a href="#">border-image-repeat</a></li>
+			<li><a href="#">border-image-slice</a></li>
+			<li><a href="#">border-image-source</a></li>
+			<li><a href="#">border-image-width</a></li>
+			<li><a href="#">border-left</a></li>
+			<li><a href="#">border-left-color</a></li>
+			<li><a href="#">border-left-style</a></li>
+			<li><a href="#">Show more...</a></li>
 		</ul>
-	</div>
-	<div class="data">
-		<h1 class="property-name">Property Name</h1>
+	</div><!--nav-->
+	<div class="main">
+		<h1 class="property-name">background</h1>
 		<p>Some property decription here</p>
-		<h2 class="property-values">Most commonly used values</h1>
+		<h2 class="property-values">background values</h1>
 			<ul>
-				<li>Value1</li>
+				<li>color  <span>85%</span></li>
+				<li>url()  <span>65%</span></li>
+				<li>repeat-x  <span>51%</span></li>
+				<li>repeat-y  <span>48%</span></li>
+				<li>position  <span>43%</span></li>
+				<li>fixed  <span>38%</span></li>
+				<li><a href="#">Show more..</a></li>
 			</ul>
 		<h2 class="property-trend">Trend</h1>
-	</div>
+		<h2 class="property-urls">Top URLs</h1>
+			<ul>
+				<li><a href="#">google.com</a></li>
+				<li><a href="#">www.bing.com</a></li>
+				<li><a href="#">apple.com</a></li>
+				<li><a href="#">tumblr.com</a></li>
+			</ul>			
+	</div><!--main-->
 </div><!--container-->
+    <script>
+	    var statusEl = document.getElementById("status");
+		var suggestionList = ["Shanghai", "Istanbul", "Karachi", "Delhi", "Mumbai", "Moscow", "Seoul", "Beijing", "Jakarta",
+		    "Tokyo", "Mexico City"];
+
+		function suggestionsRequestedHandler(eventObject) {
+		    var queryText = eventObject.detail.queryText,
+		    query = queryText.toLowerCase(),
+		    suggestionCollection = eventObject.detail.searchSuggestionCollection;
+		    if (queryText.length > 0) {
+		        for (var i = 0, len = suggestionList.length; i < len; i++) {
+		            if (suggestionList[i].substr(0, query.length).toLowerCase() === query) {
+		                suggestionCollection.appendQuerySuggestion(suggestionList[i]);
+		            }
+		        }
+		    }
+		}
+
+		function querySubmittedHandler(eventObject) {
+		    var queryText = eventObject.detail.queryText;
+		    WinJS.log && WinJS.log(queryText, "sample", "status");
+		}
+
+		WinJS.log = function (msg, source, type) {
+		    if (type === "status") {
+		        document.getElementById("statusEl").innerHTML += msg + "<br/>";
+		    }
+		}
+
+		WinJS.Namespace.define("Sample", {
+		    suggestionsRequestedHandler: WinJS.UI.eventHandler(suggestionsRequestedHandler),
+		    querySubmittedHandler: WinJS.UI.eventHandler(querySubmittedHandler)
+		});
+
+		WinJS.UI.processAll();
+    </script>
 </body>
 </html>
