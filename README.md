@@ -5,8 +5,10 @@ Prototype of displaying data about CSS usage across the web.
 
 ### Prerequisites
 1. [nodejs](https://nodejs.org/) 
-2. npm install -g grunt-cli
-
+2. grunt
+```
+npm install -g grunt-cli
+```
 ### Clone and build
 Clone css usage
 ```
