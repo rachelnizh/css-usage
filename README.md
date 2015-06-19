@@ -20,7 +20,7 @@ Build it
 
 
 ```
-cd css usage
+cd css-usage
 ```
 
 ```
