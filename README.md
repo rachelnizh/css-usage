@@ -17,6 +17,17 @@ git clone https://github.com/nizh914/css-usage.git
 ```
 
 Build it
+
+
+```
+cd css usage
+```
+
+```
+npm install
+```
+
+
 ```
 grunt
 ```
