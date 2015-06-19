@@ -6,13 +6,14 @@
     <title></title>
 	<link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />
     <link type="text/css" href="external/winjs/ui-light.css" media="all" rel="stylesheet" />
-    <script src="external/winjs/ui.js"></script>
-  	<script src="external/winjs/base.js"></script>
+    <!-- <script src="external/winjs/ui.js"></script> -->
+  	<!-- <script src="external/winjs/base.js"></script> -->
   	<script src="src/js/script.js"></script>
     <link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
+	<div onClick="myfunction()" id="foo"></div>
 	<div class="nav">
 		<ul>
 			<li class="searchbox"> Pretend I am a searchbox	   
@@ -69,7 +70,6 @@
 		<p>Some property decription here</p>
 		<h3 class="property-values">Values</h3>
 			<ul>
-				<li id="foo"></li>
 				<li>color  <span>85%</span></li>
 				<li>url()  <span>65%</span></li>
 				<li>repeat-x  <span>51%</span></li>
@@ -85,7 +85,7 @@
 		<h3 class="property-urls">Top URLs</h3>
 			<ul>
 				<li><a href="#">google.com</a></li>
-				<li><a href="#">www.bing.com</a></li>
+				<li><a href="#">bing.com</a></li>
 				<li><a href="#">apple.com</a></li>
 				<li><a href="#">tumblr.com</a></li>
 			</ul>			
@@ -93,41 +93,65 @@
 		<a href="#">background platform status</a>
 	</div><!--main-->
 </div><!--container-->
-    <script>
-	    var statusEl = document.getElementById("status");
-		var suggestionList = ["Shanghai", "Istanbul", "Karachi", "Delhi", "Mumbai", "Moscow", "Seoul", "Beijing", "Jakarta",
-		    "Tokyo", "Mexico City"];
+   <script>
 
-		function suggestionsRequestedHandler(eventObject) {
-		    var queryText = eventObject.detail.queryText,
-		    query = queryText.toLowerCase(),
-		    suggestionCollection = eventObject.detail.searchSuggestionCollection;
-		    if (queryText.length > 0) {
-		        for (var i = 0, len = suggestionList.length; i < len; i++) {
-		            if (suggestionList[i].substr(0, query.length).toLowerCase() === query) {
-		                suggestionCollection.appendQuerySuggestion(suggestionList[i]);
-		            }
-		        }
-		    }
-		}
+// var jsondata = [
+//     {
+//     	"firstName":"John", 
+//     	"lastName":"Doe"
+//     },
+//     {
+//     	"firstName":"Anna", 
+//     	"lastName":"Smith"
+//     },
+//     {
+//     	"firstName":"Peter", 
+//     	"lastName":"Jones"
+//     }
+// 	]
 
-		function querySubmittedHandler(eventObject) {
-		    var queryText = eventObject.detail.queryText;
-		    WinJS.log && WinJS.log(queryText, "sample", "status");
-		}
+// var obj = JSON.parse(jsondata);
 
-		WinJS.log = function (msg, source, type) {
-		    if (type === "status") {
-		        document.getElementById("statusEl").innerHTML += msg + "<br/>";
-		    }
-		}
+// function myfunction() {
+// 	document.getElementById("foo").innerHTML = jsondata[0].firstName;
+// }
 
-		WinJS.Namespace.define("Sample", {
-		    suggestionsRequestedHandler: WinJS.UI.eventHandler(suggestionsRequestedHandler),
-		    querySubmittedHandler: WinJS.UI.eventHandler(querySubmittedHandler)
-		});
 
-		WinJS.UI.processAll();
-    </script>
+	 //    var statusEl = document.getElementById("status");
+		// var suggestionList = ["Shanghai", "Istanbul", "Karachi", "Delhi", "Mumbai", "Moscow", "Seoul", "Beijing", "Jakarta",
+		//     "Tokyo", "Mexico City"];
+
+		// function suggestionsRequestedHandler(eventObject) {
+		//     var queryText = eventObject.detail.queryText,
+		//     query = queryText.toLowerCase(),
+		//     suggestionCollection = eventObject.detail.searchSuggestionCollection;
+		//     if (queryText.length > 0) {
+		//         for (var i = 0, len = suggestionList.length; i < len; i++) {
+		//             if (suggestionList[i].substr(0, query.length).toLowerCase() === query) {
+		//                 suggestionCollection.appendQuerySuggestion(suggestionList[i]);
+		//             }
+		//         }
+		//     }
+		// }
+
+		// function querySubmittedHandler(eventObject) {
+		//     var queryText = eventObject.detail.queryText;
+		//     WinJS.log && WinJS.log(queryText, "sample", "status");
+		// }
+
+		// WinJS.log = function (msg, source, type) {
+		//     if (type === "status") {
+		//         document.getElementById("statusEl").innerHTML += msg + "<br/>";
+		//     }
+		// }
+
+		// WinJS.Namespace.define("Sample", {
+		//     suggestionsRequestedHandler: WinJS.UI.eventHandler(suggestionsRequestedHandler),
+		//     querySubmittedHandler: WinJS.UI.eventHandler(querySubmittedHandler)
+		// });
+
+		// WinJS.UI.processAll();
+  //   
+  </script>
 </body>
 </html>

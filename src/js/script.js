@@ -1,31 +1,43 @@
-var jsondata = '{
-	"props":
-	[
-		{
-			"name":"padding-left",
-			"count":20,
-			"type":1,"
-			values":
-			[
-				{
-					"name":"px",
-					"count":20
-				}
-			]	
-		},
-		{
-			"name":"padding-right",
-			"count":8,
-			"type":1,
-			"values":
-			[
-				{
-					"name":"px",
-					"count":8
-				}
-			]
-		},
-	]
-}'
+// var jsondata = '{
+// 	"employees":[
+//     {
+//     	"firstName":"John", 
+//     	"lastName":"Doe"
+//     },
+//     {
+//     	"firstName":"Anna", 
+//     	"lastName":"Smith"
+//     },
+//     {
+//     	"firstName":"Peter", 
+//     	"lastName":"Jones"
+//     }
+// 	]
+// }'
 
-document.getElementById("foo").innerHTML = jsondata.props[0];
+// function functionFoo() {
+// 	document.getElementById("foo").innerHTML = jsondata.props[0];
+// }
+
+window.onload = function () {
+	var jsondata = [
+	    {
+	    	"firstName":"John", 
+	    	"lastName":"Doe"
+	    },
+	    {
+	    	"firstName":"Anna", 
+	    	"lastName":"Smith"
+	    },
+	    {
+	    	"firstName":"Peter", 
+	    	"lastName":"Jones"
+	    }
+		]
+
+	var obj = JSON.parse(jsondata);
+
+	function myfunction() {
+		document.getElementById("foo").innerHTML = jsondata[0].firstName;
+	}
+}
