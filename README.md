@@ -27,6 +27,10 @@ cd css-usage
 npm install
 ```
 
+```
+npm install susy
+```
+
 
 ```
 grunt
