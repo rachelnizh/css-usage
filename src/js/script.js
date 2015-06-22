@@ -37,7 +37,7 @@ window.onload = function () {
 
 	var obj = JSON.parse(jsondata);
 
-	function myfunction() {
+function myfunction() {
 		document.getElementById("foo").innerHTML = jsondata[0].firstName;
 	}
 }
