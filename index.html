@@ -13,61 +13,13 @@
 </head>
 <body>
 <div class="container">
-	<div onload="myfunction()" id="foo">json test</div>
 	<div class="nav">
-		<ul>
-			<li id="status"> Pretend I am a searchbox	   
-				<div data-win-control="WinJS.UI.AutoSuggestBox" data-win-options="{
-					placeholderText: 'Type a city',
-					onsuggestionsrequested: Sample.suggestionsRequestedHandler,
-					onquerysubmitted: Sample.querySubmittedHandler
-				}"></div>
-			</li>
-			<li><a href="#">align-items</a></li>
-			<li><a href="#">align-self</a></li>
-			<li><a href="#">animation</a></li>
-			<li><a href="#">animation-delay</a></li>
-			<li><a href="#">animation-direction</a></li>
-			<li><a href="#">animation-duration</a></li>
-			<li><a href="#">animation-fill-mode</a></li>
-			<li><a href="#">animation-iteration-count</a></li>
-			<li><a href="#">animation-name</a></li>
-			<li><a href="#">animation-play-state</a></li>
-			<li><a href="#">animation-timing-function</a></li>
-			<li><a href="#">backface-visibility</a></li>
-			<li><a href="#">background</a></li>
-			<li><a href="#">background-attachment</a></li>
-			<li><a href="#">background-clip</a></li>
-			<li><a href="#">background-color</a></li>
-			<li><a href="#">background-image</a></li>
-			<li><a href="#">background-origin</a></li>
-			<li><a href="#">background-position</a></li>
-			<li><a href="#">background-repeat</a></li>
-			<li><a href="#">background-size</a></li>
-			<li><a href="#">border</a></li>
-			<li><a href="#">border-bottom</a></li>
-			<li><a href="#">border-bottom-color</a></li>
-			<li><a href="#">border-bottom-left-radius</a></li>
-			<li><a href="#">border-bottom-right-radius</a></li>
-			<li><a href="#">border-bottom-style</a></li>
-			<li><a href="#">border-bottom-width</a></li>
-			<li><a href="#">border-collapse</a></li>
-			<li><a href="#">border-color</a></li>
-			<li><a href="#">border-image</a></li>
-			<li><a href="#">border-image-outset</a></li>
-			<li><a href="#">border-image-repeat</a></li>
-			<li><a href="#">border-image-slice</a></li>
-			<li><a href="#">border-image-source</a></li>
-			<li><a href="#">border-image-width</a></li>
-			<li><a href="#">border-left</a></li>
-			<li><a href="#">border-left-color</a></li>
-			<li><a href="#">border-left-style</a></li>
-			<li><a href="#">Show more...</a></li>
+		<ul id="props">
 		</ul>
 	</div><!--nav-->
 	<div class="main">
-		<h1 class="property-name">background</h1>
-		<p>Some property decription here</p>
+<!-- 		<h1 class="property-name">background</h1>
+ -->		<p>Some property decription here</p>
 		<h3 class="property-values">Values</h3>
 			<svg class="value-stats" viewBox="0 0 0 0" height="50">
 			     <rect x="0" y="0" width="400" height="25" />
@@ -99,26 +51,55 @@
 </div><!--container-->
    <script>
 
-var jsondata = [
+var props = [
     {
-    	"firstName":"John", 
-    	"lastName":"Doe"
-    },
-    {
-    	"firstName":"Anna", 
-    	"lastName":"Smith"
-    },
-    {
-    	"firstName":"Peter", 
-    	"lastName":"Jones"
+    	name: "background",
+    	percentage: 90,
+    	values: [
+    		{
+    			name: "green",
+    			count: "5"
+    		},
+    		{
+    			name: "url",
+    			count: "300"
+    		}
+    	],
+    	trend: [ 
+	    	{
+	    		date: "4/22/2015",
+	    		percentage: 89
+	    	},
+	    	{
+	    		date: "6/22/2015",
+	    		percentage: 91
+	    	}
+    	],
+    	urls: [
+    		{
+    			url: "www.google.com",
+    			rank: 1
+    		}
+    	]    	
     }
-	]
+	];
 
-var obj = JSON.parse(jsondata);
+//var obj = JSON.parse(props);
 
-function myfunction() {
-	document.getElementById("foo").innerHTML = jsondata[0].firstName;
-}
+// for (var i = 0; i <= props.length -1; i++) {
+// 	var member = props[i];
+// 	console.log(i);
+// 	console.log(props[i].firstName);
+// }
+
+var container = document.getElementById("props");
+
+props.forEach(function(prop) {
+	var newprop = document.createElement("li");
+	newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + prop.percentage + "%" + "</a>"; 
+	newprop.className += " property";
+	container.appendChild(newprop);
+});
 
 
 	 //    var statusEl = document.getElementById("status");
