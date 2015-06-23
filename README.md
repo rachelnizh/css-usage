@@ -11,10 +11,10 @@ Prototype of displaying data about CSS usage across the web.
 npm install -g grunt-cli
 ```
 3. ruby and sass
-Ruby
+####Ruby
 Ruby is already installed on MacOS devices. For Windows users follow the instructions here: [Setting Up Sass on Windows](http://www.impressivewebs.com/sass-on-windows/)
 
-SASS
+####SASS
 ```
 gem install sass
 ```
