@@ -18,20 +18,16 @@
 		</ul>
 	</div><!--nav-->
 	<div class="main">
-<!-- 		<h1 class="property-name">background</h1>
- -->		<p>Some property decription here</p>
+		<h1 id="property-name"></h1>
+		<p>Some property decription here</p>
 		<h3 class="property-values">Values</h3>
-			<svg class="value-stats" viewBox="0 0 0 0" height="50">
-			     <rect x="0" y="0" width="400" height="25" />
-			     <rect x="0" y="0" width="400" height="25" />
-			</svg>
-			<ul>
-				<li>color  <span>85%</span></li>
-				<li>url()  <span>65%</span></li>
-				<li>repeat-x  <span>51%</span></li>
-				<li>repeat-y  <span>48%</span></li>
-				<li>position  <span>43%</span></li>
-				<li>fixed  <span>38%</span></li>
+			<ul id="prop-values">
+				<li>color</li>
+				<li>url()</li>
+				<li>repeat-x</li>
+				<li>repeat-y</li>
+				<li>position</li>
+				<li>fixed</li>
 				<li><a href="#">Show more..</a></li>
 			</ul>
 		<h3 class="property-trend">Trend</h3>
@@ -84,59 +80,28 @@ var props = [
     }
 	];
 
-//var obj = JSON.parse(props);
+var container = document.getElementById("props");
 
+props.forEach(function(prop) {
+	document.getElementById("property-name").innerHTML = prop.name;
+	var newprop = document.createElement("li");
+	newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + prop.percentage + "%" + "</a>"; 
+	newprop.className += " property";
+	container.appendChild(newprop);
+	console.log(prop.values[0].name); 
+});
+
+
+//This is a different way to do the same loop as above. Leaving it in for reference
 // for (var i = 0; i <= props.length -1; i++) {
 // 	var member = props[i];
 // 	console.log(i);
 // 	console.log(props[i].firstName);
 // }
 
-var container = document.getElementById("props");
-
-props.forEach(function(prop) {
-	var newprop = document.createElement("li");
-	newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + prop.percentage + "%" + "</a>"; 
-	newprop.className += " property";
-	container.appendChild(newprop);
-});
+//var obj = JSON.parse(props);
 
 
-	 //    var statusEl = document.getElementById("status");
-		// var suggestionList = ["Shanghai", "Istanbul", "Karachi", "Delhi", "Mumbai", "Moscow", "Seoul", "Beijing", "Jakarta",
-		//     "Tokyo", "Mexico City"];
-
-		// function suggestionsRequestedHandler(eventObject) {
-		//     var queryText = eventObject.detail.queryText,
-		//     query = queryText.toLowerCase(),
-		//     suggestionCollection = eventObject.detail.searchSuggestionCollection;
-		//     if (queryText.length > 0) {
-		//         for (var i = 0, len = suggestionList.length; i < len; i++) {
-		//             if (suggestionList[i].substr(0, query.length).toLowerCase() === query) {
-		//                 suggestionCollection.appendQuerySuggestion(suggestionList[i]);
-		//             }
-		//         }
-		//     }
-		// }
-
-		// function querySubmittedHandler(eventObject) {
-		//     var queryText = eventObject.detail.queryText;
-		//     WinJS.log && WinJS.log(queryText, "sample", "status");
-		// }
-
-		// WinJS.log = function (msg, source, type) {
-		//     if (type === "status") {
-		//         document.getElementById("statusEl").innerHTML += msg + "<br/>";
-		//     }
-		// }
-
-		// WinJS.Namespace.define("Sample", {
-		//     suggestionsRequestedHandler: WinJS.UI.eventHandler(suggestionsRequestedHandler),
-		//     querySubmittedHandler: WinJS.UI.eventHandler(querySubmittedHandler)
-		// });
-
-		// WinJS.UI.processAll();
-  //   
   </script>
 </body>
 </html>
