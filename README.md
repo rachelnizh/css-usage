@@ -11,7 +11,6 @@ npm install -g grunt-cli
 ```
 * ruby 
 
-Ruby
 Ruby is already installed on MacOS devices. Windows users, just follow the instructions here: [Setting Up Sass on Windows](http://www.impressivewebs.com/sass-on-windows/)
 
 * sass
