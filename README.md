@@ -4,21 +4,22 @@
 Prototype of displaying data about CSS usage across the web.
 
 ### Prerequisites
-1. [nodejs](https://nodejs.org/) 
-2. grunt
-
+* [nodejs](https://nodejs.org/) 
+* grunt
 ```
 npm install -g grunt-cli
 ```
-3. ruby and sass
+* ruby 
 
-###Ruby
-Ruby is already installed on MacOS devices. For Windows users follow the instructions here: [Setting Up Sass on Windows](http://www.impressivewebs.com/sass-on-windows/)
+Ruby
+Ruby is already installed on MacOS devices. Windows users, just follow the instructions here: [Setting Up Sass on Windows](http://www.impressivewebs.com/sass-on-windows/)
 
-###SASS
+* sass
 ```
 gem install sass
 ```
+Windows users, just follow the instructions here: [Setting Up Sass on Windows](http://www.impressivewebs.com/sass-on-windows/)
+
 
 ### Clone and build
 Clone css usage
