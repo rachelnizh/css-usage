@@ -1,0 +1,208 @@
+/* 
+ *	TYPOGRAPHY
+ *	=============================================
+ */
+ 
+/* Base fonts */
+@font-face {
+	font-family: "Segoe UI Webfont";
+  	src: local("Segoe UI Light"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype");
+  	font-weight: 200;
+}
+
+@font-face {
+	font-family: "Segoe UI Webfont";
+	src: local("Segoe UI Semilight"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "Segoe UI Webfont";
+	src: local("Segoe UI"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Segoe UI Webfont";
+	src: local("Segoe UI Semibold"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.woff") format("woff"),
+		 url("https://i.s-microsoft.com/fonts/segoe-ui/west-european/semibold/latest.ttf") format("truetype");
+	font-weight: 600;
+}
+
+/* 
+	Base font size: 10px for easy rem to px conversion. 
+	Use % so if user increases their default font-size, it doesn’t wipe that out
+*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+  font: 400 100%/1 "Segoe UI Webfont", "Segoe UI", Segoe, 'Segoe WP', "Lucida Grande", "Lucida Sans", Tahoma, Verdana, Arial, sans-serif;
+}
+
+p, ul, ol,
+legend, label, input, textarea, select,
+button, .button,
+td,
+pre,
+.base {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/*	Headings and Captions */
+h1, h2,
+.headline,
+.heading {
+	letter-spacing: -.01em;
+}
+
+h1, h2, h3,
+.headline,
+.heading,
+.subheading {
+	font-weight: 200;
+	line-height: 1.2;
+}
+
+h4, h5, h6,
+figure,
+caption,
+thead th,
+.subheading,
+.title,
+.subtitle,
+.caption,
+.caption--alt {
+	line-height: 1.25;
+}
+
+h4, h5, h6,
+.subtitle,
+.caption,
+.caption--alt,
+.subcaption,
+thead th {
+	font-weight: 400;
+}
+
+.headline {
+	font-size: 5.0rem;
+}
+
+h1,
+.heading {
+	font-size: 3.6rem;
+}
+
+h2,
+.subheading {
+	font-size: 2.8rem;
+}
+
+h3,
+.title {
+	font-weight: 300;
+	font-size: 2.2rem;
+}
+
+h4,
+caption,
+.subtitle {
+	font-size: 2rem;
+}
+
+h5,
+.caption,
+thead th {
+	font-size: 1.2rem;
+}
+
+h6,
+.caption--alt {
+	font-size: 1rem;
+}
+
+.subcaption {
+	font-size: .8rem;
+}
+
+fieldset, label {
+	font-weight: 600;
+}
+
+@media (min-width: 33.75em) {
+
+	.headline {
+		font-size: 5.4rem;
+	}
+
+	h1,
+	.heading {
+		font-size: 4.1rem;
+	}
+	
+	h2,
+	.subheading {
+		font-size: 3rem;
+	}
+	
+	h3,
+	.title {
+		font-weight: 300;
+		font-size: 2.3rem;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.headline {
+		font-size: 6.2rem;
+	}
+
+	h1,
+	.heading {
+		font-size: 4.6rem;
+	}
+
+	h2,
+	.subheading {
+		font-size: 3.4rem;
+	}
+	
+	h3,
+	.title {
+		font-size: 2.4rem;
+	}
+
+}
+
+/* Maximum line lengths */
+p, li,
+input, textarea, select,
+h3, h4, h5, h6,
+figure,
+thead th,
+.title,
+.subtitle,
+.caption,
+.caption--alt {
+	max-width: 60rem;
+}
+
+/* Override line lengths */
+.header p,
+.header li,
+.footer p,
+.footer li {
+	max-width: none;
+}

@@ -1,0 +1,52 @@
+/* 
+ *	BASE
+ *	=============================================
+ */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+button, input, select {
+	font: inherit;
+}
+
+a:focus,
+input:focus,
+button:focus,
+textarea:focus,
+summary:focus,
+[tabindex]:focus {
+    outline: 1px dotted #000;
+}
+
+/*
+	Vertical rhythm
+	Sets a margin on top of all elements that have a previous sibling.
+*/
+@media (max-width: 33.74em) {
+
+	* + * {
+		margin-top: 1.2rem;
+	}
+
+}
+
+@media (min-width: 33.75em) {
+
+	* + * {
+		margin-top: 2rem;
+	}
+
+}
+
+/* Remove owl from body */
+body {
+  margin-top: 0;
+}

@@ -34,7 +34,7 @@ $layout1: (
 
 //Draw the grid
 .container {
-	@include container(90%);		
+	@include container(100%);		
 	background-color: $white;
 }
 
@@ -62,22 +62,9 @@ $layout1: (
 // }
 
 //General styles
-body {
-	background-color: $offwhite;
-	font-family: Selawik, sans-serif;
-}
-
-p, li {
-	color: $text-secondary;
-}
 
 a {
 	text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: Selawik Semilight, sans-serif;
-	color: $text-primary;	
 }
 
 ul {
@@ -112,12 +99,6 @@ ul li {
 			}
 		}
 	} 
-}
-
-.trend-graph {
-	height: 400px;
-	border: 1px solid $text-secondary;
-	text-align: center;
 }
 
 .value-stats {

@@ -1,0 +1,117 @@
+/* 
+ *	BASIC STRUCTURE
+ *	=============================================
+ *	@Dependencies: base.css
+ */
+
+.content {
+  margin: 0 auto 4.8rem;
+}
+
+/* Standard sections and subsections */
+.section {
+	margin-top: 4.8rem;
+}
+
+.section:first-child {
+	margin-top: 2.4rem;
+}
+
+.section__header + .section__body,
+.subsection,
+.subsection__body {
+ 	margin-top: 2.4rem;
+}
+
+.subsection__header {
+	display: block;
+}
+
+.subsection:first-child {
+	margin-top: 0;
+}
+
+/* Alt sectioning header styles */
+.section__header--alt,
+.subsection__header--alt {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid hsla(0, 0%, 0%, .1);
+}
+
+/*
+  Containing element goes INSIDE sections,
+  as some sections are full-bleed on the page.
+*/
+.container {
+	width: 92.5%;
+	max-width: 144rem;
+	margin: 0 auto;
+}
+
+.container .container {
+	width: auto;
+}
+
+/* Dividers */
+hr {
+	height: 1px;
+	border: none;
+}
+
+@media (min-width: 20em) {
+
+	.container {
+		width: 91.1%;
+	}
+	
+}
+
+@media (min-width: 33.75em) {
+
+	.content {
+		margin-bottom: 6rem;
+  	}
+
+  	.section {
+		margin-top: 6rem;
+	}
+
+	.section:first-child {
+		margin-top: 4.8rem;
+	}
+
+	.section__header + .section__body,
+	.subsection,
+	.subsection__body {
+		margin-top: 3.2rem;
+	}
+
+	.container {
+		width: 87.5%;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.content {
+		margin-bottom: 8.4rem;
+	}
+	
+ 	.section {
+		margin-top: 8.4rem;
+	}
+	
+	.section:first-child {
+		margin-top: 4.8rem;
+	}
+	
+	.subsection {
+	  margin-top: 4.8rem;
+	}
+	
+  	.container {
+		width: 90%;
+	}
+
+}
