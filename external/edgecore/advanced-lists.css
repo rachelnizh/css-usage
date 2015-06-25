@@ -1,0 +1,218 @@
+/* 
+ *	ADVANCED LISTS
+ *	=============================================
+ *	@Dependencies: base.css, color.css, type.css, layouts.css
+ */
+
+/* List reset */ 
+.list--links,
+.list--icons,
+.list--bios,
+.list--avatars {
+  margin-left: 0;
+  list-style: none;
+}
+
+.item-description {
+	margin-top: .8rem;
+}
+
+.list--icons > li {
+	min-height: 2.4rem;
+	padding-left: 3.6rem;
+}
+
+.list--icons > li,
+.list--bios > li {
+	position: relative;
+	margin-top: 2.4rem;
+}
+
+.list--icons > li:first-child,
+.list--bios > li:first-child {
+	margin-top: 0;
+}
+
+ /* @Note: Link icons are hinted for 16, 24, 32, 48, 64 px, so keep rems to those ratios. E.g. 2.4rem for 24px */
+.list--icons .icon--link::before {
+	position: absolute;
+	top: .1em;
+	left: -1px;
+	
+	width: 2.6rem;
+	height: 2.6rem;
+	
+	color: inherit;
+	
+	font-size: 2.4rem;
+	line-height: 1;
+	text-align: center;
+}
+
+.list--site-section-links > li,
+.list--bios > li {
+	min-height: 3.2rem;
+	padding-left: 5.2rem;
+}
+
+.list--site-section-links .icon--link::before {
+	width: 3.4rem;
+	height: 3.4rem;
+	
+	font-size: 3.2rem;
+	text-align: center;
+}
+
+/* 	
+ *	AVATAR
+ *	--------------------------------------------- 
+ */
+
+.avatar {
+	display: inline-block;
+
+	width: 3.2rem;
+	height: 3.2rem;
+	
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.list--bios .avatar {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.list--avatars {
+	margin-left: -1.2rem;
+}
+.list--avatars > li {
+	display: inline-block;
+	margin: 0 0 1.2rem 1.2rem;
+}
+
+@media (min-width: 33.75em) {
+
+	.list--icons > li,
+	.list--bios > li {
+		margin-top: 3.2rem;
+	}
+
+	.list--site-section-links > li,
+	.list--bios > li {
+		min-height: 4.8rem;
+		padding-left: 6.8rem;
+	}
+	
+	.list--site-section-links .icon--link::before {
+		width: 5rem;
+		height: 5rem;
+		
+		font-size: 4.8rem;
+	}
+	
+	.avatar {
+		width: 4.8rem;
+		height: 4.8rem;
+	}
+
+}
+
+/* When special list items are floated modules */
+
+@media (min-width: 20em) {
+
+	.list--site-section-links > .module,
+	.list--bios > .module {
+		padding-left: 6.4rem;
+	}
+
+	.list--site-section-links > .module .icon--link::before,
+	.list--bios > .module .avatar {
+		left: 1.2rem;
+	}
+	
+}
+
+@media (min-width: 33.75em) {
+
+	.list--site-section-links > .module,
+	.list--bios > .module {
+		padding-left: 8rem;
+	}
+
+}
+
+@media (min-width: 33.75em) {
+
+	.list--site-section-links > .module,
+	.list--bios > .module {
+		padding-left: 8.4rem;
+	}
+	
+	.list--site-section-links > .module .icon--link::before,
+	.list--bios > .module .avatar {
+		left: 1.6rem;
+	}
+
+}
+
+/* 	
+ *	NESTED NAV
+ *	---------------------------------------------
+ *  A vertical navigation list with multiple levels.
+ */
+
+.nav--nested ul {
+	margin: 0;
+	list-style: none;
+}
+
+.nav--nested .link--current > a {
+	font-weight: 700;
+}
+
+/* Spacing on top level */
+.nav--nested li {
+	margin-top: 2rem;
+}
+
+.nav--nested li:first-child {
+	margin-top: 0;
+}
+
+/* Spacing on second level and below */
+.nav--nested li ul {
+	margin-bottom: 2rem;
+	padding-left: 2rem;
+}
+
+.nav--nested li li {
+	margin-top: 1.2rem;
+}
+
+.nav--nested li li:first-child {
+	margin-top: 1.3rem;
+}
+
+/* Back link */
+.nav--nested__back {
+	margin-top: 3.2rem;
+	padding-top: 3.2rem;
+}
+
+.nav--nested__back__link::before {
+	margin-right: 1.2rem;
+	vertical-align: middle;
+	font-size: 2rem;
+}
+
+@media (min-width: 60em) {
+
+	.nav--nested__back {
+		margin-top: 4rem;
+		padding-top: 4rem;
+	}
+
+}

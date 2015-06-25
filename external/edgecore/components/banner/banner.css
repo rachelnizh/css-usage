@@ -1,0 +1,190 @@
+/* 
+ * BANNER + IMAGE BANNER
+ * =============================================
+ * @Dependencies: base.css, structure.css
+ */
+
+.section--banner,
+.section--image-banner {
+	margin-top: 2.4rem;
+}
+
+.section--banner {
+	padding: 2.4rem 0;
+	
+	overflow: hidden;
+	color: #fff;
+	background: #414143;
+
+}
+
+.section--banner a:not(.button) {
+	border-bottom: 1px solid hsla(0, 0%, 100%, .75);
+	color: inherit;
+}
+
+.section--banner a:not(.button):hover {
+	border-bottom-color: #fff;
+	color: #fff;
+}
+
+.section--banner .button {
+	color: #414143;
+	background: #fff;
+}
+
+.section--banner img,
+.section--image-banner img {
+	display: block;
+}
+
+.section--banner .module--secondary {
+	margin-top: 3.2rem;
+}
+
+.section--banner .module__body {
+	color: hsla(0, 0%, 100%, .75);
+}
+
+.section--banner .module--flush-bottom {
+	margin-bottom: -2.5rem;
+}
+
+/* Modify top margin of section directly below banner or page header section */
+.section--page-intro + section,
+.section--banner + .section,
+.section--image-banner + .section {
+	margin-top: 2.4em;
+}
+
+/* Light Banner Theme */
+.section--banner--light {
+	color: #414143;
+	background: #f4f4f4;
+}
+
+.section--banner--light a:not(.button) {
+	border-bottom: 0 none;
+	color: #006fc6;
+}
+
+.section--banner--light a:not(.button):hover {
+	color: #666;
+}
+
+
+/* 	
+ *	IMAGE BANNER
+ *	--------------------------------------------- 
+ */
+ 
+.section--image-banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.image-banner__background-image {
+	display: block;
+	z-index: 1;
+}
+
+.image-banner__tile {
+	position: relative;
+	z-index: 2;
+	
+	margin-top: 0;
+}
+
+@media (min-width: 33.75em) {
+
+	.section--banner,
+	.section--image-banner {
+		position: relative;
+		margin-top: 3.2rem;
+	}
+	
+	.section--image-banner {
+		min-height: 27rem;
+	}
+	
+	.section--page-intro + section,
+	.section--banner + .section,
+	.section--image-banner + .section {
+		margin-top: 3.2rem;
+	}
+	
+	.section--banner .module--flush-bottom {
+		margin-bottom: -3.3rem;
+	}
+
+}
+
+@media (max-width: 47.9375em) {
+
+	.section--image-banner .container {
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.section--banner,
+	.section--image-banner {
+		margin-top: 4.8rem;
+		padding: 4.8rem 0;
+	}
+	
+	.section--page-intro + section,
+	.section--banner + .section,
+	.section--image-banner + .section {
+		margin-top: 4.8rem;
+	}
+	
+	.section--banner .actions {
+		margin-top: 3.2rem;
+	}
+
+	.section--banner .module--secondary {
+		margin-top: 0;
+	}
+	
+	.section--banner .module--flush-bottom {
+		margin-bottom: -4.9rem;
+	}
+	
+	.section--image-banner {
+		min-height: 50rem;
+	}
+	
+	.image-banner__background {
+		position: absolute;
+	  	top: -50%;
+	  	left: -50%;
+	  
+	  	width: 200%;
+	 	height: 200%;
+	}
+	.image-banner__background__image {
+		position: absolute;
+	  	top: 0;
+	  	right: 0;
+	  	bottom: 0;
+	  	left: 0;
+
+	  	width: auto;
+	  	min-width: 50%;
+	  	max-width: none;
+		  
+	  	height: auto;
+	  	min-height: 50%;
+		  
+	  	margin: auto;
+	}
+
+	.image-banner__tile {
+		width: 50%;
+		max-width: 60rem;
+	}
+
+}

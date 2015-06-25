@@ -17,6 +17,10 @@ button, input, select {
 	font: inherit;
 }
 
+img {
+	border: 0;
+}
+
 a:focus,
 input:focus,
 button:focus,

@@ -1,0 +1,71 @@
+/* 
+ *	TABLES + LISTS
+ *	=============================================
+ *	@Dependencies: base.css, type.css
+ */
+ 
+
+/* 	
+ *	TABLES
+ *	---------------------------------------------
+ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+th,
+caption {
+	text-align: left;
+}
+
+caption {
+	margin-bottom: 3.2rem;
+	border-bottom: 1px solid hsla(0, 0%, 0%, .1);
+	padding-bottom: 1rem;
+}
+
+th, td {
+	padding: 1.6rem;
+	vertical-align: top;
+	
+	color: hsla(0, 0%, 0%, .6)
+}
+
+thead th {
+	padding: 0 1.6rem 1rem 1.6rem;
+	vertical-align: bottom;
+}
+
+td:first-child {
+	 color: inherit; /* back to black (or base colour) */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: hsla(0, 0%, 0%, .05);
+}
+
+/* Parent class allows table to scroll sideways when overflowing */
+.table--overflow {
+	width: 100%;
+	overflow-x: auto;
+}
+
+/* 	
+ *	LISTS
+ *	---------------------------------------------
+ */
+
+ul, ol {
+  margin-left: 1.25em;
+}
+
+li {
+	margin-top: 1.2rem;
+}
+
+li:first-child {
+	margin-top: 0;
+}

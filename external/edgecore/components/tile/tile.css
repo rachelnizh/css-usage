@@ -1,0 +1,34 @@
+/* 
+ * TILES
+ * =============================================
+ * @Dependencies: base.css
+ */
+
+.tile {
+	padding: 2.4rem;
+	
+	color: #fff;
+	background: #414143;
+}
+
+.tile a:not(.button) {
+	border-bottom: 1px solid hsla(0, 0%, 100%, .75);
+	color: inherit;
+}
+
+.tile a:not(.button):hover {
+	border-bottom-color: #fff;
+}
+
+.tile .button {
+	color: #414143;
+	background: #fff;
+}
+
+@media (min-width: 33.75em) {
+
+	.tile {
+		padding: 3.2rem;
+	}
+
+}

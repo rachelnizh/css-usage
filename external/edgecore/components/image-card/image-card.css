@@ -1,0 +1,49 @@
+/* 
+ * IMAGE CARD
+ * =============================================
+ * @Dependencies: base.css, structure.css, layouts.css
+ */
+
+.module__image {
+	display: block;
+	width: 100%;
+}
+
+.module__image img {
+	width: 100%;
+}
+
+@media (min-width: 40em) and (max-width: 60em) {
+
+	/* Float image next to content if this card is a "third" */
+	.layout--thirds .module--image-card {
+		float: none;
+		clear: both;
+		
+		width: 100%;
+	}
+
+	.layout--thirds .module--image-card:nth-child(2) {
+		margin-top: 3.2rem;
+	}
+
+	.layout--thirds .module--image-card .module__image,
+	.layout--equal .module--image-card:nth-last-child(3):first-child .module__image,
+	.layout--equal .module--image-card:nth-last-child(3):first-child ~ .module--image-card .module__image {
+	 	float: left;
+		 
+		width: 50%;
+	  	padding-right: 1.6rem;
+	}
+
+	.layout--thirds .module--image-card .module__content,
+	.layout--equal .module--image-card:nth-last-child(3):first-child .module__content,
+	.layout--equal .module--image-card:nth-last-child(3):first-child ~ .module--image-card .module__content {
+	 	float: right;
+	  
+	  	width: 50%;
+	  	margin-top: 0;
+	  	padding-left: 1.6rem;
+	}
+
+}

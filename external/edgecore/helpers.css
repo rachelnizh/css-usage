@@ -1,0 +1,33 @@
+/* 
+ *	HELPERS
+ *  @Dependencies: base.css
+ *	============================================
+ */
+ 
+/*
+ * Hide only visually, but have it available for screen readers:
+ * @Notes: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+ 
+.visually-hidden {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+/* Clear floated child elements */
+
+.clear::before,
+.clear::after {
+	display: table;
+	content: "";
+}
+
+.clear::after {
+	clear: both;
+}

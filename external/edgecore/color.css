@@ -1,0 +1,382 @@
+/* 
+ *	COLOURS
+ *	=============================================
+ */
+ 
+body,
+.nav--nested .link--current > a {
+	color: #414143;
+}
+
+a,
+a:visited,
+.button--textual,
+.nav--nested a:hover,
+.button--icon {
+	color: #0078D7; /* Blue highlight colour */
+}
+
+a:hover,
+.button--textual:hover,
+.nav--nested a,
+.button--icon:hover {
+	color: #666;
+}
+
+a:active,
+.button--textual:active,
+.nav--nested a:active,
+.button--icon:active {
+	color: #999;
+}
+
+/* Current and disabled links */
+.link--current,
+.link--current > a {
+	color: #767676;
+}
+
+.link--disabled,
+.link--disabled a {
+	color: #414143;
+	pointer-events: none;
+	cursor: default;
+}
+
+.section-header .subtitle {
+    color: #767676;
+}
+
+input,
+textarea,
+select {
+	border-color: hsla(0, 0%, 0%, .4);
+	background-color: hsla(0, 0%, 100%, .4);
+}
+
+input[type="file"]::-ms-value {
+    border-color: hsla(0, 0%, 0%, .4);
+	background-color: hsla(0, 0%, 100%, .4);
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: hsla(0, 0%, 0%, .6); 
+}
+
+input[type="file"]:hover::-ms-value {
+    border-color: hsla(0, 0%, 0%, .6); 
+}
+
+input:focus, textarea:focus {
+    border-color: #0078D7;
+    background-color: #fff;
+}
+
+input[type="file"]:focus::-ms-value {
+    border-color: #0078D7;
+    background-color: #fff;
+}
+
+input:disabled,
+input[readonly],
+fieldset[disabled] input,
+textarea[disabled], textarea[readonly], 
+fieldset[disabled] textarea {
+	border-color: transparent;
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+/* Undo the disabled input background applying to non-text field style controls */
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled,
+input[type="range"]:disabled {
+    background-color: transparent;
+}
+
+input:invalid,
+textarea:invalid {
+	border-color: #E81123;
+}
+
+.note--error,
+.alert--error {
+	color: #E81123;
+}
+
+button,
+input[type="button"],
+.button {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="file"]::-ms-browse {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+.button,
+.button:hover,
+.button:active {
+	color: #000; /* needed if .button is on an a element */
+}
+
+button:hover, button:focus,
+input[type="button"]:hover, input[type="button"]:focus,
+.button:hover, .button:focus {
+    border-color: hsla(0, 0%, 0%, .4);
+}
+
+input[type="file"]:hover::-webkit-file-upload-button,
+input[type="file"]:focus::-webkit-file-upload-button {
+	border-color: hsla(0, 0%, 0%, .4);
+}
+
+input[type="file"]:hover::-ms-browse,
+input[type="file"]:focus::-ms-browse {
+	border-color: hsla(0, 0%, 0%, .4);
+}
+
+button:active,
+input[type="button"]:active,
+.button:active,
+button.button--primary:active,
+input[type="button"].button--primary:active,
+.button.button--primary:active {
+	background-color: hsla(0, 0%, 0%, .4);
+	border-color: transparent;
+}
+
+input[type="file"]:active::-webkit-file-upload-button,
+input[type="file"]::-webkit-file-upload-button:active {
+	background-color: hsla(0, 0%, 0%, .4);
+	border-color: transparent;
+}
+
+input[type="file"]::-ms-browse:active {
+	background-color: hsla(0, 0%, 0%, .4);
+	border-color: transparent;
+}
+
+button.button--primary,
+input[type="button"].button--primary,
+.button.button--primary {
+	background-color: #0078D7;
+	color: #fff;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+select:disabled,
+.button:disabled, .button.disabled,
+fieldset[disabled] button,
+fieldset[disabled] input[type="button"],
+fieldset[disabled] select,
+fieldset[disabled] .button {
+	color: hsla(0, 0%, 0%, .2);
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+select:disabled,
+fieldset[disabled] select {
+	border-color: hsla(0, 0%, 0%, .2);
+    color:  hsla(0, 0%, 0%, .6);
+}
+
+select:focus,
+select option:focus,
+select option:checked {
+    background-color: #3a96dd;
+}
+
+select:focus::-ms-value {
+	color: #fff;
+}
+
+select:active {
+   background-color: #fff;
+}
+
+select option:active {
+	background-color: #767676;
+	color: #000;
+}
+
+input[type="checkbox"]::-ms-check,
+input[type="radio"]::-ms-check {
+	background-color: transparent;
+ 	border-color: hsla(0, 0%, 0%, .8);
+}
+
+input[type="checkbox"]:hover::-ms-check,
+input[type="radio"]:hover::-ms-check {
+    border-color: #000;
+}
+
+input[type="checkbox"]:checked::-ms-check,
+input[type="radio"]:checked::-ms-check {
+	border-color: #0078D7;
+}
+
+input[type="checkbox"]:checked::-ms-check {
+	background-color: #0078D7;
+	color: #fff;
+}
+
+input[type="checkbox"]:active::-ms-check {
+	background-color: hsla(0, 0%, 0%, .6);
+	border-color: transparent;
+	color: #000;
+}
+ 
+input[type="radio"]:active::-ms-check,
+input[type="radio"]:active:checked::-ms-check {
+    color: hsla(0, 0%, 0%, .6);
+    border-color: currentColor;
+}
+
+input[type="checkbox"]:disabled::-ms-check,
+input[type="radio"]:disabled::-ms-check,
+fieldset[disabled] input[type="checkbox"]::-ms-check,
+fieldset[disabled] input[type="radio"]::-ms-check {
+	color: hsla(0, 0%, 0%, .2);
+	background-color: transparent;
+    border-color: currentColor;
+}
+
+/* needed so active styles don’t override disabled styles */
+input[type="radio"]:disabled:checked::-ms-check, 
+fieldset[disabled] input[type="radio"]:checked::-ms-check {
+   color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	background-color: hsla(0, 0%, 0%, .4);
+}
+
+input[type="range"]::-moz-range-track {
+	background-color: hsla(0, 0%, 0%, .4);
+}
+
+input[type="range"]::-ms-fill-lower {
+    background-color: #0078d7;
+}
+
+input[type="range"]::-ms-fill-upper {
+	background-color: hsla(0, 0%, 0%, .4);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #0078d7;
+}
+
+input[type="range"]::-moz-range-thumb {
+	background-color: #0078d7;
+} 
+
+input[type="range"]::-ms-thumb {
+	background-color: #0078d7;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: #1f1f1f;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+	background-color: #1f1f1f;
+} 
+
+input[type="range"]:hover::-ms-thumb {
+	background-color: #1f1f1f;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: #ccc;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+	background-color: #ccc;
+}
+
+input[type="range"]:active::-ms-thumb {
+	background-color: #ccc;
+}
+
+input[type="range"]:disabled::-webkit-slider-runnable-track {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="range"]:disabled::-moz-range-track {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="range"]:disabled::-ms-fill-lower,
+input[type="range"]:disabled::-ms-fill-upper {
+	background-color: hsla(0, 0%, 0%, .2);
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+    background-color: #ccc;
+}
+
+input[type="range"]:disabled::-moz-range-thumb {
+	background-color: #ccc;
+}
+
+input[type="range"]:disabled::-ms-thumb {
+	background-color: #ccc;
+}
+
+progress {
+	color: #0078D7; /* colours progress bar in IE */
+	background-color: #ccc;	/* colours progress background in IE and Firefox */
+}
+
+progress::-webkit-progress-value {
+	background-color: #0078D7; /* progress bar colour */
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ccc; /* progess background colour */
+}
+
+progress::-moz-progress-bar {
+    background-color: #0078D7; /* progress bar colour (not bg like WebKit) */
+}
+
+.modal-dialog {
+   background-color: #fff;
+}
+
+.modal[aria-hidden="false"] {
+	background-color: hsla(0, 0%, 0%, .5);
+}
+
+pre, .code-block {
+	background: hsla(0, 0%, 0%, .03);
+	border: 2px solid hsla(0, 0%, 0%, .03);
+}
+
+.rendered-result {
+	border: 2px solid hsla(0, 0%, 0%, .06);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	color: hsla(0, 0%, 0%, .6);
+}
+
+/* Lines for visual separation */
+hr {
+	background: hsla(0, 0%, 0%, .1);
+}
+
+/* Nav patterns */
+.nav--nested__back {
+	border-top: 1px solid #919191;
+	border-top: 1px solid hsla(0, 0%, 0%, .57);
+}

@@ -1,0 +1,76 @@
+/* 
+ *	CODE + RESULT BOXES
+ *	=============================================
+ *	@Dependencies: base.css
+ */
+ 
+ 
+/* 	
+ *	CODE OUTPUT
+ *	---------------------------------------------
+ *	@Notes: Legacy
+ */
+
+.output {
+	border: 3px solid #efefef;
+}
+
+.output__header {
+	padding: 1rem 2rem;
+	color: #000;
+	background: #efefef;
+}
+
+.output__body {
+	margin: 0;
+	padding: 2rem;
+}
+
+
+/* 	
+ *	CODE BLOCKS
+ *	---------------------------------------------
+ */
+
+pre, .code-block, .rendered-result {
+	width: 100%;
+	padding: 1.2rem;
+	overflow-x: auto;
+}
+
+pre, code {
+	font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+}
+
+@media (min-width: 60em) {
+
+	pre, .code-block, .rendered-result {
+		padding: 2rem;
+	}
+
+}
+
+
+/* 	
+ *	 GITHUB GIST OVERRIDES
+ *	---------------------------------------------
+ */
+
+/* Remove universal vertical rhythm */
+.gist-meta {
+	margin-top: 0;
+}
+
+.gist-file {
+	border-width: 2px;
+	border-bottom: 2px solid #ddd;
+}
+
+.gist-data {
+	border-bottom-width: 2px;
+}
+
+.gist-data div,
+.gist-data span {
+	margin-top: 0;
+}

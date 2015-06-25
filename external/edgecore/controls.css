@@ -1,0 +1,358 @@
+/* 
+ * CONTROLS
+ * =============================================
+ * @Dependencies: base.css
+ */
+ 
+fieldset {
+	border: 0 none;
+}
+
+
+/* 	
+ *	LABELS
+ *	---------------------------------------------
+ */
+
+label {
+	display: block;
+}
+
+/* @Browser: Safari. Forces margins to be recognized */
+legend ~ label {
+	-webkit-margin-top-collapse: separate;
+}
+
+
+/* 	
+ *	TEXT FIELDS
+ *	---------------------------------------------
+ *	Note: 
+ *		Styles general `input` to avoid high specificity.
+ *		Declarations that cause issues for other types are separated in own rulesets 
+ */
+
+input, 
+textarea,
+select {
+	border: 2px solid;
+	padding: .4rem .8rem;
+}
+
+/* add width and height only if not button, or it will override natural dimensions */
+input:not([type="button"]), 
+textarea,
+select {
+	width: 100%;
+	height: 3.2rem;
+}
+
+/* Should be able to change textarea height using rows attribute */
+textarea {
+	height: auto;
+	min-height: 3.2rem;
+}
+
+/* add margin only if not radio/check so don‘t need to re-apply default `* + * { margin-top }` */
+label + input:not([type="radio"]):not([type="checkbox"]), 
+textarea,
+select {
+	margin: .4rem 0;
+}
+
+
+/* 	
+ *	BUTTONS
+ *	---------------------------------------------
+ */
+ 
+button,
+input[type="button"],
+.button:link, .button:visited {
+	min-width: 10rem;
+	max-width: 100%;
+	border: 2px solid transparent;
+	padding: .4rem 1.2rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #000;
+	
+	/* needed for .button as doesn’t always get default control behaviours */
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* DISABLED state styles */
+
+button:disabled,
+input[type="button"]:disabled,
+select:disabled, 
+.button:disabled, .button.disabled,
+fieldset[disabled] button,
+fieldset[disabled] input[type="button"],
+fieldset[disabled] select,
+fieldset[disabled] .button {
+	cursor: not-allowed;
+	pointer-events: none;
+	outline: none;
+}
+
+/* This style for a primary button on the entire page, for added visual emphasis */
+button.button--page-primary,
+input[type="button"].button--page-primary,
+.button.button--page-primary {
+	padding: 1.2rem;
+	font-weight: 300;
+	font-size: 2rem;
+	line-height: 1;
+}
+
+/* Actions */
+.actions a,
+.actions .button {
+	display: inline-block;
+	margin-top: 1.2rem;
+}
+
+/* Textual buttons */
+.button--textual {
+	vertical-align: top;
+	min-width: 0;
+ 	padding: 0;
+ 	border: 0 none;
+	font-weight: 400;
+}
+
+.button--textual,
+.button--textual:hover,
+.button--textual:active {
+	background: transparent;
+}
+
+/* Icon-only buttons */
+.button--icon,
+.button--icon:hover,
+.button--icon:active {
+	border: none;
+	background: transparent;
+}
+
+.button--icon {
+	position: relative;
+	min-width: 0;
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	text-indent: 100%;
+}
+
+.button--icon::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 2rem;
+	line-height: 1;
+	text-indent: 0;
+}
+
+/* 	
+ *	SELECTS
+ *	---------------------------------------------
+ */
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	padding-right: 2.4rem;
+	
+	border-radius: 0;
+	background: #fff url("../images/select-arrow.svg") no-repeat right 6px center;
+	background-size: 1.3rem .8rem;
+	
+	/* @Browser: Firefox. Extra styles needed to hide default arrow */
+    text-indent: .01px;
+	
+    text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+
+/* @Browser: IE. Doesn't support `-webkit-appearance`, but `:-ms-expand` supported in IE 10 + 11 */
+select::-ms-expand {
+  display: none;
+}
+
+/* Safe to remove focus, as very visable border on focus */
+select:focus {
+	outline: 0;
+}
+
+
+/* 	
+ *	RADIOS AND CHECKBOXES
+ *	---------------------------------------------
+ */
+
+input[type="radio"],
+input[type="checkbox"] {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+
+input[type="radio"]::-ms-check,
+input[type="checkbox"]::-ms-check {
+	border-width: 2px;
+}
+
+/* Radio/checks need special label handling as label goes after control */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: table;
+    padding-left: 3.2rem;
+}
+
+input[type="radio"]  + label::after,
+input[type="checkbox"] + label::after {
+    content:"";
+    display: block;
+}
+
+/* Sets of radios/checks need tighter margins, special font-weight */
+.checkable-set input[type="radio"],
+.checkable-set input[type="checkbox"],
+.checkable-set input[type="radio"] + label, 
+.checkable-set input[type="checkbox"] + label {
+	margin-top: 1.2rem;
+}
+
+.checkable-set input[type="radio"] + label,
+.checkable-set input[type="checkbox"] + label {
+	font-weight: 400;
+}
+
+
+/* 	
+ *	FILE UPLOAD
+ *	---------------------------------------------
+ */
+
+input[type="file"] {
+	/* reset styles added by generic input selector */
+	height: auto;
+	border: none;
+	
+	outline: none; /* added back on file upload button */
+}
+
+/* styles the part where the file name is displayed. Only possible in IE/MSEdge */
+input[type="file"]::-ms-value {
+	height: 3.2rem;
+	border: 2px solid;
+}
+
+/* styles the button part of the control. Only IE/MSEdge and WebKit */
+input[type="file"]::-webkit-file-upload-button {
+	height: 3.2rem; /* can’t style text part so add height here for WebKit */
+	border: 2px solid transparent;
+	padding: .4rem 1.2rem;
+}
+
+input[type="file"]::-ms-browse {
+	border: 2px solid transparent;
+	padding: .4rem 1.2rem;
+}
+
+/* first selector needed for keyboard tab focus, second for activating button */
+input[type="file"]:focus::-webkit-file-upload-button,
+input[type="file"]::-webkit-file-upload-button:focus {
+	outline: 1px dotted;
+}
+
+input[type="file"]::-ms-browse:focus {
+    outline: 1px dotted;
+}
+
+/* 	
+ *	RANGE
+ *	---------------------------------------------
+ */
+
+input[type="range"] {
+	-webkit-appearance: none;
+	
+	height: 4.2rem;
+	border: none;
+	padding: 1.6rem 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: .2rem;
+}
+
+input[type="range"]::-moz-range-track {
+	height: .2rem;	
+}
+
+input[type="range"]::-ms-track {
+	height: .2rem;
+	border: none;
+	
+	color: transparent; /* Remove ticks */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+
+  	width: .8rem;
+	height: 2.4rem;
+	margin-top: -1.1rem; /* half thumb minus half track height */
+
+	border-radius: .4rem;
+}
+
+input[type="range"]::-moz-range-thumb  {
+	width: .8rem;
+	height: 2.4rem;
+	
+	border: none;
+	border-radius: .4rem;
+}
+
+input[type="range"]::-ms-thumb {
+	width: .8rem;
+	height: 2.4rem;
+	
+	border: none;
+	border-radius: .4rem;
+}
+
+
+/* 	
+ *	PROGRESS
+ *	---------------------------------------------
+ */
+
+progress {
+	display: block;
+	
+	width: 100%;
+	height: .4rem;
+	
+	/* @Browser: Firefox. Has border that needs removed */
+	border: none;
+}
+
+/* @Browser: IE, MSEdge. Remove default border from filled part of progress bar */
+progress::-ms-fill {
+	border: none;
+}

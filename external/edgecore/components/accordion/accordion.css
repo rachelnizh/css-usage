@@ -1,0 +1,142 @@
+/* 
+ *	ACCORDIONS (deprecated)
+ * =============================================
+ *  @Dependencies: base.css, icons.css
+ */
+
+.accordion {
+	margin: 0;
+}
+
+.accordion__toggle {
+	position: relative;
+	
+	width: 100%;
+	margin: 0;
+	border: none;
+	padding: 2rem 5rem 2rem 0;
+
+	color: #0078D7;
+	
+	font-size: 2rem;
+	text-align: left;
+	white-space: normal;
+}
+
+.accordion__toggle,
+.accordion__toggle:hover,
+.accordion__toggle:focus {
+	border-bottom: 1px solid #e6e6e6;
+	background-color: transparent;
+}
+
+.accordion__toggle:hover {
+	color: #666;
+}
+
+.accordion__toggle::after {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	
+	margin-top: -1rem;
+	
+	color: #767676;
+	
+	font-size: 2rem;
+	line-height: 1;
+
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+	
+	-webkit-transition: height 300ms ease;
+	transition: height 300ms ease;
+}
+
+.accordion__body {
+	height: 0;
+	margin-top: 0;
+
+	overflow: hidden;
+	-webkit-transition: height 300ms ease;
+	transition: height 300ms ease;
+}
+
+.accordion__body__content {
+	padding-top: 2rem;
+}
+
+.accordion--expanded .accordion__toggle::after {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+	
+	-webkit-transition: -webkit-transform 300ms ease;
+	transition: transform 300ms ease;
+}
+
+
+/* 
+ *	ACCORDIONS (new)
+ * =============================================
+ *  @Dependencies: base.css, icons.css
+ */
+
+details {
+	margin: 0;
+}
+
+summary {
+	position: relative;
+	display: block;
+	
+	margin: 0;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 2rem 5rem 2rem 0;
+
+	color: #0078D7;	
+	font-size: 2rem;
+	line-height: 1.5;
+	
+	cursor: pointer;
+}
+
+summary:hover {
+	color: #666;
+}
+
+/* Remove the marker. Unkown what pseudo will be for non-Webkit ATM */
+summary::-webkit-details-marker {
+	display: none;
+}
+
+/* Add custom marker back and animate it */
+summary::after {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	
+	color: #767676;
+	
+	/* Move up 1/2 height of icon to make it exactly in middle */
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+	-webkit-transition: -webkit-transform 300ms ease;
+	transition: transform 300ms ease;
+}
+
+details[open] summary::after {
+	-webkit-transform: translateY(-50%) rotate(180deg);
+	transform: translateY(-50%) rotate(180deg);
+}
+
+/* Hide and show contents of accordion. Needed for browsers that don’t support natively */
+details > div {
+	display: none;
+}
+
+details[open] > div {
+	display: block;
+}

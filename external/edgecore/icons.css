@@ -1,0 +1,103 @@
+/* 
+ *	ICON FONT
+ *	=============================================
+ */
+ 
+@font-face {
+	font-family: "PlatformIcons";
+	src: url('../fonts/PlatMDL2.woff') format('woff'),
+       	 url('../fonts/PlatMDL2.ttf') format('truetype');
+}
+
+[class*="icon--"]::before,
+[class*="icon--"]::after,
+.accordion__toggle::after,
+.pagination__next::before,
+.pagination__previous::before,
+summary::after {
+	font-family: "PlatformIcons";
+}
+
+.icon--global-nav-button::before {content: "\E700";}
+.icon--quick-note::before {content: "\E70B";}
+.icon--chevron-down::before, .accordion__toggle::after, summary::after {content: "\E70D";}
+.icon--chevron-up::before {content: "\E70E";}
+.icon--edit::before {content: "\E70F";}
+.icon--add::before {content: "\E710";}
+.icon--cancel::before {content: "\E711";}
+.icon--more::before {content: "\E712";}
+.icon--settings::before {content: "\E713";}
+.icon--video::before {content: "\E714";}
+.icon--mail::before {content: "\E715";}
+.icon--people::before {content: "\E716";}
+.icon--stop::before {content: "\E71A";}
+.icon--link::before {content: "\E71B";}
+.icon--filter::before {content: "\E71C";}
+.icon--zoom::before {content: "\E71E";}
+.icon--zoom-out::before {content: "\E71F";}
+.icon--microphone::before {content: "\E720";}
+.icon--search::before, .icon--scan::before {content: "\E721";}
+.icon--camera::before {content: "\E722";}
+.icon--forward::before, .pagination__next::before {content: "\E72A";}
+.icon--back::before, .pagination__previous::before {content: "\E72B";}
+.icon--refresh::before {content: "\E72C";}
+.icon--share::before {content: "\E72D";}
+.icon--blocked::before, .icon--deprecated::before {content: "\E733";}
+.icon--favorite-star::before, .icon--new:before {content: "\E734";}
+.icon--favorite-star-fill::before {content: "\E735";}
+.icon--remove::before {content: "\E738";}
+.icon--up::before {content: "\E74A";}
+.icon--down::before {content: "\E74B";}
+.icon--sad::before {content: "\E757";}
+.icon--volume::before {content: "\E767";}
+.icon--play::before {content: "\E768";}
+.icon--Pause::before {content: "\E769";}
+.icon--chevron-left::before {content: "\E76B";}
+.icon--chevron-right::before {content: "\E76C";}
+.icon--error::before, .icon--issues:before {content: "\E783";}
+.icon--calendar::before {content: "\E787";}
+.icon--filters::before {content: "\E795";}
+.icon--flag::before {content: "\E7C1";}
+.icon--page::before {content: "\E7C3";}
+.icon--touch::before {content: "\E815";}
+.icon--history::before {content: "\E81C";}
+.icon--recent::before {content: "\E823";}
+.icon--clear::before {content: "\E894";}
+.icon--sync::before {content: "\E895";}
+.icon--download::before {content: "\E896";}
+.icon--help::before {content: "\E897";}
+.icon--upload::before {content: "\E898";}
+.icon--switch::before, .icon--changed::before {content: "\E8AB";}
+.icon--remote::before {content: "\E8AF";}
+.icon--like-dislike::before {content: "\E8DF";}
+.icon--dislike::before {content: "\E8E0";}
+.icon--like::before {content: "\E8E1";}
+.icon--tag::before {content: "\E8EC";}
+.icon--accept::before, .icon--success::before  {content: "\E8FB";}
+.icon--news::before {content: "\E900";}
+.icon--repair::before, .icon--fixed:before {content: "\E90F";}
+.icon--unknown::before, .icon--faq::before {content: "\E9CE";}
+.icon--feedback-app::before {content: "\E939";}
+.icon--code::before {content: "\E943";}
+.icon--info::before {content: "\E946";}
+.icon--input::before {content: "\E961";}
+.icon--chart::before {content: "\E999";}
+.icon--help-mirrored::before {content: "\EA51";}
+.icon--media::before {content: "\EA69";}
+.icon--articles::before {content: "\EAC1";}
+.icon--trackers::before {content: "\EADF";}
+.icon--world-markets::before, .icon--interop::before {content: "\EB18";}
+.icon--performance::before {content: "\EB24";}
+.icon--edit-mirrored::before {content: "\EB7E";}
+.icon--photo2::before, .icon--graphics::before {content: "\EB9F";}
+.icon--open-source::before {content: "\EBC2";}
+.icon--bug::before {content: "\EBE8";}
+.icon--feature-request::before {content: "\EBE9";}
+.icon--changelog::before {content: "\EBEA";}
+.icon--virtual-machine::before {content: "\EBEB";}
+.icon--site-scan::before {content: "\EBEC";}
+.icon--browser-screenshot::before {content: "\EBED";}
+.icon--f12-dev-tools::before {content: "\EBEE";}
+.icon--css::before {content: "\EBEF";}
+.icon--js::before, .icon--javascript::before {content: "\EBF0";}
+.icon--documentation::before {content: "\EC17";}

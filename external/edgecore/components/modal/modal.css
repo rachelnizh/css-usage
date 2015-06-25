@@ -1,0 +1,75 @@
+/* 
+ * MODAL DIALOGS
+ * =============================================
+ * @Dependencies: base.css
+ */
+
+/* Reset vertical rhythm */
+.modal,
+.modal__body {
+	margin-top: 0;
+}
+
+.modal {
+	display: none;
+	
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+
+	overflow: hidden;
+	transition: background-color .5s;
+}
+
+.modal[aria-hidden="false"] {
+	display: block;
+}
+
+.modal-dialog {
+	width: auto;
+	margin: 50vh auto;
+	border: 2px solid #0078D7;
+	padding: 1.6rem;
+		
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+.modal__header {
+ 	padding-bottom: .2rem;
+}
+
+.modal__footer {
+	margin: 2.8rem 0 2rem 0;
+}
+
+/* Needed to contain floats when button:only-child */
+.modal__footer::after, .modal__footer::before {
+	display: table;
+	content: "";
+}
+
+.modal__footer::after {
+	clear: both;
+}
+
+.modal__footer button {
+	width: calc(50% - 2px);
+	margin-top: 2rem;
+}
+
+.modal__footer button:only-child {
+    float: right; 
+}
+
+@media (min-width: 540px) {
+	
+	.modal-dialog {
+		width: 60rem; 
+	}
+	
+}
