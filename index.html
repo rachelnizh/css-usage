@@ -5,191 +5,58 @@
     <meta charset="utf-8" />
     <title></title>
 	<link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />
-	<link type="text/css" href="external/edgecore/base.css" media="all" rel="stylesheet" />
-	<link type="text/css" href="external/edgecore/structure.css" media="all" rel="stylesheet" />
-	<link type="text/css" href="external/edgecore/layouts.css" media="all" rel="stylesheet" />
-	<link type="text/css" href="external/edgecore/type.css" media="all" rel="stylesheet" />
-	<link type="text/css" href="external/header.css" media="all" rel="stylesheet" />
-    <!-- <link type="text/css" href="external/winjs/ui-light.css" media="all" rel="stylesheet" /> -->
-    <!-- <script src="external/winjs/ui.js"></script> -->
-  	<!-- <script src="external/winjs/base.js"></script> -->
-  	<!-- <script src="src/js/script.js"></script> -->
-  	<link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" />
+	<!-- UNIVERSAL STYLES (REQUIRED) -->
+	<link rel="stylesheet" href="external/edgecore/base.css"/>
+	<link rel="stylesheet" href="external/edgecore/type.css"/>
+	<link rel="stylesheet" href="external/edgecore/media.css"/>
+	<link rel="stylesheet" href="external/edgecore/controls.css"/>
+	
+	<!-- ADDITIONAL UNIVERSAL STYLES -->
+	<link rel="stylesheet" href="external/edgecore/structure.css"/>
+	<link rel="stylesheet" href="external/edgecore/layouts.css"/>
+	<link rel="stylesheet" href="external/edgecore/tables-lists.css"/>
+	<link rel="stylesheet" href="external/edgecore/advanced-lists.css"/>
+	<link rel="stylesheet" href="external/edgecore/icons.css"/>
+	<link rel="stylesheet" href="external/edgecore/code.css"/>
+	
+	<!-- COMPONENTS -->
+	<link rel="stylesheet" href="external/edgecore/components/accordion/accordion.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/banner/banner.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/breadcrumb/breadcrumb.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/image-card/image-card.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/modal/modal.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/note/note.css"/>
+	<link rel="stylesheet" href="external/edgecore/components/tile/tile.css"/>
+	
+	<!-- THESE GOES LAST (REQUIRED) -->
+	<link rel="stylesheet" href="external/edgecore/color.css"/>
+	<link rel="stylesheet" href="external/edgecore/helpers.css"/>
+
+  	<script src="src/js/script.js"></script>
+  	<!-- <link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" /> -->
+
 </head>
 <body>
-
-	<!-- lazy drop in of header -->
-	<div class="bg-wrap">
-		<header class="header" role="banner">
-			<div class="container">
-				<h1 class="header__logo title"><a title="home" href="/">
-					<span class="header__logo__wordmark">Microsoft Edge</span> Dev <span class="header__logo__beta">(beta)</span></a></h1>
-					<div class="header__help">
-						<button class="header__toggle icon--global-nav-button" role="presentation"><span class="visually-hidden" role="presentation">Toggle menu</span></button>
-						<div class="header__help__content">
-							<label class="caption" for="help-options">I need help with</label>
-							<select class="header__help__content__options" id="help-options">
-								<option>Choose an option</option>
-								<option value="http://stackoverflow.com/questions/tagged/microsoft-edge+internet-explorer" data-target="_blank">A site I'm working on</option>
-								<option value="https://connect.microsoft.com/IE" data-target="_blank">A bug in the platform</option>
-								<option value="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer" data-target="_blank">A feature I'd like added</option>
-								<option value="/platform/status/">Finding feature support</option>
-							</select>
-							</div>
-							</div>
-							</div>
-							<nav class="nav" role="navigation" aria-label="Site"><ul class="layout layout--equal nav__navbar"><li class="module navbar__navitem navitem--web-platform accordion" role="group" data-collapse="auto">
-								<a title="Web Platform" class="accordion__toggle  navitem__button" role="button" aria-expanded="false" href="/platform/">Web Platform <span class="navbar__navitem__description caption">Learn about Microsoft Edge</span></a>
-								<div class="navbar__navitem--bottom-container"><div class="accordion__body"><div class="navitem__dropdown accordion__body__content" aria-hidden="true">
-									<ul class="dropdown__options"><li><a href="/platform/" target="_self">Web Platform</a></li><li><a href="/platform/status/" target="_self">Platform Status</a></li><li>
-										<a href="/platform/changelog/" target="_self">Changelog</a></li><li><a href="/platform/faq/" target="_self">FAQ</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/dn705792.aspx" target="_blank">Web apps in Windows 10</a></li></ul></div></div></div></li><li class="module navbar__navitem navitem--news-and-community accordion" role="group" data-collapse="auto"><a title="News &amp; Community" class="accordion__toggle  navitem__button" role="button" aria-expanded="false" href="/community/">News &amp; Community <span class="navbar__navitem__description caption">Connect with the team</span></a><div class="navbar__navitem--bottom-container"><div class="accordion__body"><div class="navitem__dropdown accordion__body__content" aria-hidden="true"><ul class="dropdown__options"><li><a title="News &amp; Community" href="/community/" target="_self">What’s New</a></li><li><a title="Link 4" href="/community/social/" target="_self">Blogs &amp; Social Media</a></li><li><a title="Open Source" href="/community/oss/" target="_self">Open Source Projects</a></li><li><a title="Open Source" href="http://events.msdn.microsoft.com/en-us/" target="_blank">Events</a></li><li><a title="Feedback" href="/community/support/" target="_self">Feedback &amp; Support</a></li></ul></div></div></div></li><li class="module navbar__navitem navitem--tools accordion" role="group" data-collapse="auto"><a title="Tools" class="accordion__toggle  navitem__button" role="button" aria-expanded="false" href="/tools/">Tools <span class="navbar__navitem__description caption">Test and debug your site</span></a><div class="navbar__navitem--bottom-container"><div class="accordion__body">
-					<div class="navitem__dropdown accordion__body__content" aria-hidden="true"><ul class="dropdown__options"><li><a title="All Tools" href="/tools/" target="_self">All Tools</a></li><li><a title="RemoteIE" href="https://remote.modern.ie/" target="_blank">RemoteIE</a></li><li><a title="Virtual Machines" href="/tools/vms/" target="_self">Virtual Machines</a></li><li><a title="Site Scan" href="/tools/staticscan/" target="_self">Site Scan</a></li><li><a title="Browser Screenshots" href="/tools/screenshots/" target="_self">Browser Screenshots</a></li></ul></div></div></div></li><li class="module navbar__navitem navitem--testdrive accordion" role="group" data-collapse="auto"><a class="accordion__toggle  navitem__button" role="button" aria-expanded="false" href="/testdrive/">Demos <span class="navbar__navitem__description caption">Get inspired</span></a><div class="navbar__navitem--bottom-container">
-					<div class="accordion__body">
-						<div class="navitem__dropdown accordion__body__content" aria-hidden="true">
-					<ul class="dropdown__options">
-						<li>
-							<a href="/testdrive/" target="_self">Explore Demos</a>
-						</li>
-					</ul>
-						</div>
-					</div>
+<section class="container">
+	<div class="layout layout--sidebar">
+		<div class="module module--secondary">
+			<ul id="props" class="list--links">
+			</ul>
+		</div><!--nav-->
+		<div class="module module--primary">
+			<h1 class="property-name"></h1>
+			<p>Some property decription here</p>
+			<h3>Values</h3>
+				<ul id="prop-values">
+				</ul>
+			<h3>Trend</h3>
+				<div id="prop-trends">
 				</div>
-				</li>
-			</ul>
-			</nav>
-		</header>
-	</div>
-	<!-- lazy drop in of header -->
-
-<div class="container">
-	<div class="nav module">
-		<ul id="props">
-		</ul>
-		<ul>
-			<li><a href="#">background-attachment</a></li>
-			<li><a href="#">background-clip</a></li>
-			<li><a href="#">background-color</a></li>
-			<li><a href="#">background-image</a></li>
-			<li><a href="#">background-origin</a></li>
-			<li><a href="#">background-position</a></li>
-			<li><a href="#">background-repeat</a></li>
-			<li><a href="#">background-size</a></li>
-			<li><a href="#">border</a></li>
-			<li><a href="#">border-bottom</a></li>
-			<li><a href="#">border-bottom-color</a></li>
-			<li><a href="#">border-bottom-left-radius</a></li>
-			<li><a href="#">border-bottom-right-radius</a></li>
-			<li><a href="#">border-bottom-style</a></li>
-			<li><a href="#">border-bottom-width</a></li>
-			<li><a href="#">border-collapse</a></li>
-			<li><a href="#">border-color</a></li>
-			<li><a href="#">border-image</a></li>
-			<li><a href="#">border-image-outset</a></li>
-			<li><a href="#">border-image-repeat</a></li>
-			<li><a href="#">border-image-slice</a></li>
-			<li><a href="#">border-image-source</a></li>
-			<li><a href="#">border-image-width</a></li>
-			<li><a href="#">border-left</a></li>
-			<li><a href="#">border-left-color</a></li>
-			<li><a href="#">border-left-style</a></li>
-			<li><a href="#">Show more...</a></li>				
-		</ul>
-	</div><!--nav-->
-	<div class="main module">
-		<h1 class="property-name"></h1>
-		<p>Some property decription here</p>
-		<h3>Values</h3>
-			<ul id="prop-values">
-			</ul>
-		<h3>Trend</h3>
-			<div id="prop-trends">
-			</div>
-		<h3>Top URLs using <span class="property-name"></span></h3>
-			<ul id="prop-urls">
-			</ul>			
-<!-- 		<h3 class="property-more-info">More info</h3>
-		<a href="#">background platform status</a> -->
-	</div><!--main-->
-</div><!--container-->
-<script>
-var props = [
-    {
-    	name: "background",
-    	percentage: 90,
-    	values: [
-    		{
-    			name: "green",
-    			count: "5"
-    		},
-    		{
-    			name: "url",
-    			count: "300"
-    		}
-    	],
-    	trend: [ 
-	    	{
-	    		date: "4/22/2015",
-	    		percentage: 89
-	    	},
-	    	{
-	    		date: "6/22/2015",
-	    		percentage: 91
-	    	}
-    	],
-    	urls: [
-    		{
-    			url: "www.google.com",
-    			rank: 1
-    		},
-    		{
-    			url: "www.bing.com",
-    			rank: 26
-    		},
-    		{
-    			url: "www.apple.com",
-    			rank: 48
-    		},
-    		{
-    			url: "www.tumblr.com",
-    			rank: 41
-    		}
-    	]    	
-    }
-	];
-
-var propertynav = document.getElementById("props");
-var valuesnav = document.getElementById("prop-values");
-var trendnav = document.getElementById("prop-trends");
-var urlnav = document.getElementById("prop-urls");
-var propertyname = document.getElementsByClassName('property-name');
-
-props.forEach(function(prop) {
-	for (var i = 0; i < propertyname.length; i++) {
-	    propertyname[i].innerHTML = prop.name;
-	}
-	var newprop = document.createElement("li");
-	newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + prop.percentage + "%" + "</a>"; 
-	propertynav.appendChild(newprop);
-
-	for (var i = 0; i < prop.values.length; i++) {
-		var value = prop.values[i];
-		var newvalue = document.createElement("li");
-		newvalue.innerHTML = value.name + " " + value.count;
-		valuesnav.appendChild(newvalue);
-	};
-	 for (var i = 0; i < prop.trend.length; i++) {
-	 	var trend = prop.trend[i];
-		var newtrend = document.createElement("p");
-		newtrend.innerHTML = trend.date + " " + trend.percentage;
-		trendnav.appendChild(newtrend);
-	};
-	 for (var i = 0; i < prop.urls.length; i++) {
-	 	var url = prop.urls[i];
-		var newurl = document.createElement("li");
-		newurl.innerHTML = url.url + " " + url.rank;
-		urlnav.appendChild(newurl);
-	};
-});
-</script>
+			<h3>Top URLs using <span class="property-name"></span></h3>
+				<ul id="prop-urls">
+				</ul>			
+		</div><!--module primary-->
+	</div><!--layout-->
+</section><!--container-->
 </body>
 </html>
