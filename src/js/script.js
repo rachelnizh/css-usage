@@ -6,30 +6,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Put things in the DOM
     var propertynav = document.getElementById("props");
-    var valuesnav = document.getElementById("prop-values");
+    var propvalues = document.getElementById("prop-values");
     var trendnav = document.getElementById("prop-trends");
     var urlnav = document.getElementById("prop-urls");
     var propertyname = document.getElementsByClassName('property-name');
 
+    //Create left nav
     props.forEach(function(prop) {
-        for (var i = 0; i < propertyname.length; i++) {
-            //code to put property name in headers here
-        }
-
         var newprop = document.createElement("li");       
-        var ppercent = Math.round(prop.percentage*100);
-        newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
-        propertynav.appendChild(newprop);
-        
-        console.log(prop.values);
+        var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
+        newprop.innerHTML = '<a href="#"' + '">' + prop.name + " " + ppercent + "%" + '</a>';
+        //newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
+        newprop.setAttribute("id", prop.name);
+        propertynav.appendChild(newprop);      
 
-        for (var i = 0; i < prop.values.length; i++) {
-            //var value = prop.values[i];
-            //var newvalue = document.createElement("li");
-            //newvalue.innerHTML = value.name + " " + value.count;
-            //valuesnav.appendChild(newvalue);
-        };    
+        document.getElementById(prop.name).addEventListener("click", loadPropData);
 
+        function loadPropData() {
+            document.getElementById(prop.name);
+            var propertyvalues = prop.values;
+
+             //Add property name to places where property-name class exists
+            for (var i = 0; i < propertyname.length; i++) {
+                propertyname[i].innerHTML = prop.name;
+            }
+
+            //Add property values to prop-values list or graph
+            for (var i = 0; i < propertyvalues.length; i++) {
+                var propvaluename = prop.values[i].name;
+                var propvaluecount = prop.values[i].count;
+                var propvaluepercentage = (Math.round(prop.values[i].percentage*100)); //converting to percentage rather decimal by *100
+                var propvaluetrend = prop.values[i].trend;
+                var newvalue = document.createElement("li");
+                newvalue.innerHTML = propvaluename + propvaluecount + propvaluepercentage;
+                //propvalues.innerHTML = newvalue;
+            }
+
+
+        }
     });
 
     //OLD FUNCTION
