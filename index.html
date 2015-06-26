@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+
+    <!-- NORMALIZE -->
 	<link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />
 	<!-- UNIVERSAL STYLES (REQUIRED) -->
 	<link rel="stylesheet" href="external/edgecore/base.css"/>
@@ -32,6 +34,10 @@
 	<link rel="stylesheet" href="external/edgecore/color.css"/>
 	<link rel="stylesheet" href="external/edgecore/helpers.css"/>
 
+	<!-- HIGH CHARTS -->
+	<script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+
+	<!-- MY SCRIPT -->
   	<script src="src/js/script.js"></script>
   	<!-- <link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" /> -->
 
@@ -45,13 +51,13 @@
 		</div><!--nav-->
 		<div class="module module--primary">
 			<h1 class="property-name"></h1>
-			<p><span class="property-name"></span> is the greatest CSS property of all time. There will be some property decription here.</p>
-			<h3>Values</h3>
-				<ul id="prop-values">
-				</ul>
+			<p>An estimated <span id="prop-count"></span> websites are using <span class="property-name"></span> wordwide. </p>
 			<h3>Trend</h3>
 				<div id="prop-trends">
 				</div>
+			<h3>Values</h3>
+				<ul id="prop-values">
+				</ul>
 			<h3>Top URLs using <span class="property-name"></span></h3>
 				<ul id="prop-urls">
 				</ul>			

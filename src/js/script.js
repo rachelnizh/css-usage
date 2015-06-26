@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //Variable declartions
     var propertynav = document.getElementById("props");
     var propvalues = document.getElementById("prop-values");
-    var trendnav = document.getElementById("prop-trends");
+    var proptrend = document.getElementById("prop-trends");
     var urlnav = document.getElementById("prop-urls");
+    var propcount = document.getElementById('prop-count');
     var propertyname = document.getElementsByClassName('property-name');
 
     //Create left nav
@@ -26,7 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         function loadPropData() {
             document.getElementById(prop.name);
+            //newprop.className += " active"; //add active class to selected property
             var propertyvalues = prop.values;
+            propcount.innerHTML = (prop.count);
+
+            var trenddate = prop.trend;
+
+            console.log(prop.trend);
 
              //Add property name to places where property-name class exists
             for (var i = 0; i < propertyname.length; i++) {
@@ -44,12 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 newvalue.innerHTML = valuename + " " + valuecount;
                 
                 //var newvaluestring = newvalue.toString;
-                console.log(newvalue);
-                propvalues.innerHTML = newvalue;
+                //console.log(newvalue);
+                propvalues.innerHTML = newvalue.outerHTML;
                 //propvalues.innerHTML = newvaluestring;
                 //propvalues.innerHTML = newvalue[i];
             }
 
         }
     });
+
 });
