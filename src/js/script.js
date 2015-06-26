@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var parsedresults = JSON.parse(results);
     var props = parsedresults.props;
 
-    //Variable declartions
+    //Variable declarations for DOM elements
     var propertynav = document.getElementById("props");
     var propvalues = document.getElementById("prop-values");
     var proptrend = document.getElementById("prop-trends");
+    var proppercent = document.getElementById("prop-percent");
     var urlnav = document.getElementById("prop-urls");
     var propcount = document.getElementById('prop-count');
     var propertyname = document.getElementsByClassName('property-name');
 
-    //Create left nav
+    //PROPERTY NAMES NAVIGATION
     props.forEach(function(prop) {
         var newprop = document.createElement("li");       
         var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
@@ -22,26 +23,45 @@ document.addEventListener('DOMContentLoaded', function() {
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
 
-        //When a property is click load the data
+        //When a property is clicked load the data
         document.getElementById(prop.name).addEventListener("click", loadPropData);
-        
         function loadPropData() {
             document.getElementById(prop.name);
-            //newprop.className += " active"; //add active class to selected property
-            var propertyvalues = prop.values;
-            propcount.innerHTML = (prop.count);
+            //add active class to selected property
+            //newprop.className += " active"; 
 
-            var trenddate = prop.trend;
-
-            console.log(prop.trend);
-
-             //Add property name to places where property-name class exists
+            //PROPERTY NAME DATA
             for (var i = 0; i < propertyname.length; i++) {
                 propertyname[i].innerHTML = prop.name;
             }
+            
+            //PROPERTY COUNT DATA
+            propcount.innerHTML = prop.count;
 
-            var valuelayout = "";
-            var livaluelayout = "";
+            //PROPERTY PERCENTAGE DATA
+			proppercent.innerHTML = ppercent;
+
+            //TREND DATA
+            var propertytrend = prop.trend;
+            var propertylayout = "";
+
+            for (var i = 0; i < propertytrend.length; i++) {
+	            var trenddate = prop.trend[i].date;
+	            var trendpercentage = prop.trend[i].percentage;
+	            var newtrend = document.createElement("li");
+
+	            newtrend.innerHTML = trenddate + " " + trendpercentage;
+	            propertylayout += newtrend.outerHTML;
+
+	        	if (i == propertytrend.length -1) {
+	           		proptrend.innerHTML = propertylayout;
+                }
+            }
+
+            //VALUES DATA
+            //Variable to keep propvalues empty so it doesn't append when a new prop is clicked
+            var propertyvalues = prop.values;
+            var valuelayout = ""; 
 
             //Add property values to prop-values list or graph
             for (var i = 0; i < propertyvalues.length; i++) {
@@ -51,17 +71,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 var valuetrend = prop.values[i].trend;
                 var newvalue = document.createElement("li");
 
+                //Put data inside newvalue li
                 newvalue.innerHTML = valuename + " " + valuecount;
-
+                //Concat value data
                 valuelayout += newvalue.outerHTML;
-
+                //When the last value is looped through put the data in the ul
                 if (i == propertyvalues.length -1) {
                     propvalues.innerHTML = valuelayout;
                 }
-
             }
-
         }
     });
-
 });
