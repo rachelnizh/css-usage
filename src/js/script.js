@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var parsedresults = JSON.parse(results);
     var props = parsedresults.props;
 
-    //Put things in the DOM
+    //Variable declartions
     var propertynav = document.getElementById("props");
     var propvalues = document.getElementById("prop-values");
     var trendnav = document.getElementById("prop-trends");
@@ -15,13 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
     props.forEach(function(prop) {
         var newprop = document.createElement("li");       
         var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
+        //newprop.innerHTML = '<a href="#' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';        
         newprop.innerHTML = '<a href="#"' + '">' + prop.name + " " + ppercent + "%" + '</a>';
         //newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
 
+        //When a property is click load the data
         document.getElementById(prop.name).addEventListener("click", loadPropData);
-
+        
         function loadPropData() {
             document.getElementById(prop.name);
             var propertyvalues = prop.values;
@@ -33,45 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             //Add property values to prop-values list or graph
             for (var i = 0; i < propertyvalues.length; i++) {
-                var propvaluename = prop.values[i].name;
-                var propvaluecount = prop.values[i].count;
-                var propvaluepercentage = (Math.round(prop.values[i].percentage*100)); //converting to percentage rather decimal by *100
-                var propvaluetrend = prop.values[i].trend;
+                var valuename = prop.values[i].name;
+                var valuecount = prop.values[i].count;
+                var valuepercentage = (Math.round(prop.values[i].percentage*100)); //converting to percentage rather decimal by *100
+                var valuetrend = prop.values[i].trend;
                 var newvalue = document.createElement("li");
-                newvalue.innerHTML = propvaluename + propvaluecount + propvaluepercentage;
-                //propvalues.innerHTML = newvalue;
-            }
 
+                newvalue.innerHTML = valuename + " " + valuecount;
+                
+                //var newvaluestring = newvalue.toString;
+                console.log(newvalue);
+                propvalues.innerHTML = newvalue;
+                //propvalues.innerHTML = newvaluestring;
+                //propvalues.innerHTML = newvalue[i];
+            }
 
         }
     });
-
-    //OLD FUNCTION
-    //props.forEach(function(prop) {
-        // for (var i = 0; i < propertyname.length; i++) {
-    	//     propertyname[i].innerHTML = prop.name;
-    	// }
-    // 	var newprop = document.createElement("li");
-    // 	newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + prop.percentage + "%" + "</a>"; 
-    // 	propertynav.appendChild(newprop);
-
-    // 	for (var i = 0; i < prop.values.length; i++) {
-    // 		var value = prop.values[i];
-    // 		var newvalue = document.createElement("li");
-    // 		newvalue.innerHTML = value.name + " " + value.count;
-    // 		valuesnav.appendChild(newvalue);
-    // 	};
-    // 	 for (var i = 0; i < prop.trend.length; i++) {
-    // 	 	var trend = prop.trend[i];
-    // 		var newtrend = document.createElement("li");
-    // 		newtrend.innerHTML = trend.date + " " + trend.percentage;
-    // 		trendnav.appendChild(newtrend);
-    // 	};
-    // 	 for (var i = 0; i < prop.urls.length; i++) {
-    // 	 	var url = prop.urls[i];
-    // 		var newurl = document.createElement("li");
-    // 		newurl.innerHTML = url.url + " " + url.rank;
-    // 		urlnav.appendChild(newurl);
-    // 	};
-    //});
 });
