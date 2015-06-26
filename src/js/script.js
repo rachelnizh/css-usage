@@ -8,24 +8,28 @@ document.addEventListener('DOMContentLoaded', function() {
     var propertynav = document.getElementById("props");
     var propvalues = document.getElementById("prop-values");
     var proptrend = document.getElementById("prop-trends");
-    var proppercent = document.getElementById("prop-percent");
-    var urlnav = document.getElementById("prop-urls");
+    var proppercent = document.getElementsByClassName("prop-percent");
+    var propurls = document.getElementById("prop-urls");
     var propcount = document.getElementById('prop-count');
     var propertyname = document.getElementsByClassName('property-name');
 
     //PROPERTY NAMES NAVIGATION
     props.forEach(function(prop) {
         var newprop = document.createElement("li");       
-        var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
-        newprop.innerHTML = '<a href="#' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';        
+        newprop.innerHTML = '<a href="#' + prop.name + '">' + prop.name + '</a>';        
         //newprop.innerHTML = '<a href="#"' + '">' + prop.name + " " + ppercent + "%" + '</a>';
         //newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
 
+        //Prevent page jumping when property is clicked
+        document.getElementById(prop.name).addEventListener("click", function(stopJump) {
+        	stopJump.preventDefault()
+        });
+
         //When a property is clicked load the data
         document.getElementById(prop.name).addEventListener("click", loadPropData);
-        function loadPropData() {
+        function loadPropData() {    
             document.getElementById(prop.name);
             //add active class to selected property
             //newprop.className += " active"; 
@@ -39,7 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
             propcount.innerHTML = prop.count;
 
             //PROPERTY PERCENTAGE DATA
-			proppercent.innerHTML = ppercent;
+        	var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
+            for (var i = 0; i < proppercent.length; i++) {
+                proppercent[i].innerHTML = ppercent;
+            }
 
             //TREND DATA
             var propertytrend = prop.trend;
@@ -80,6 +87,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     propvalues.innerHTML = valuelayout;
                 }
             }
+
+            //URLS DATA
+            var propertyurls = prop.urls;
+            var urlslayout = "";
+
+            for (var i=0; i < propertyurls.length; i++) {
+            	var url = prop.urls[i].url;
+            	var rankglobal = prop.urls[i].rankGlobal;
+            	var newurl = document.createElement("li");
+
+            	newurl.innerHTML = url + " " + rankglobal;
+            	urlslayout += newurl.outerHTML;
+            	console.log(urlslayout);
+
+                if (i == propertyurls.length -1) {
+                    propurls.innerHTML = urlslayout;
+                }
+
+            }
+
         }
     });
 });
