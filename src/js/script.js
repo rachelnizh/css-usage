@@ -50,11 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 newvalue.innerHTML = valuename + " " + valuecount;
                 
-                //var newvaluestring = newvalue.toString;
                 console.log(newvalue);
                 propvalues.innerHTML += newvalue.outerHTML;
-                //propvalues.innerHTML = newvaluestring;
-                //propvalues.innerHTML = newvalue[i];
+
             }
 
         }
