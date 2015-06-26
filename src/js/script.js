@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     props.forEach(function(prop) {
         var newprop = document.createElement("li");       
         var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
-        //newprop.innerHTML = '<a href="#' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';        
-        newprop.innerHTML = '<a href="#"' + '">' + prop.name + " " + ppercent + "%" + '</a>';
+        newprop.innerHTML = '<a href="#' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';        
+        //newprop.innerHTML = '<a href="#"' + '">' + prop.name + " " + ppercent + "%" + '</a>';
         //newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 propertyname[i].innerHTML = prop.name;
             }
 
+            var valuelayout = "";
+            var livaluelayout = "";
+
             //Add property values to prop-values list or graph
             for (var i = 0; i < propertyvalues.length; i++) {
                 var valuename = prop.values[i].name;
@@ -49,9 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 var newvalue = document.createElement("li");
 
                 newvalue.innerHTML = valuename + " " + valuecount;
-                
-                console.log(newvalue);
-                propvalues.innerHTML += newvalue.outerHTML;
+
+                valuelayout += newvalue.outerHTML;
+
+                if (i == propertyvalues.length -1) {
+                    propvalues.innerHTML = valuelayout;
+                }
 
             }
 
