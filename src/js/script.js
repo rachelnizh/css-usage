@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
 
+        //load display be default
+        //window.location.href = "./index.html/#display";
+
         //Prevent page jumping when property is clicked
         document.getElementById(prop.name).addEventListener("click", function(stopJump) {
         	stopJump.preventDefault()
@@ -79,33 +82,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 var newvalue = document.createElement("li");
 
                 //Put data inside newvalue li
-                newvalue.innerHTML = valuename + " " + valuecount;
+                newvalue.innerHTML = valuename + " " + valuepercentage + "%";
                 //Concat value data
                 valuelayout += newvalue.outerHTML;
-                //When the last value is looped through put the data in the ul
-                if (i == propertyvalues.length -1) {
-                    propvalues.innerHTML = valuelayout;
-                }
             }
+
+            propvalues.innerHTML = valuelayout;
 
             //URLS DATA
             var propertyurls = prop.urls;
             var urlslayout = "";
 
-            for (var i=0; i < propertyurls.length; i++) {
+            for (var i=0; i < 10; i++) {
             	var url = prop.urls[i].url;
             	var rankglobal = prop.urls[i].rankGlobal;
             	var newurl = document.createElement("li");
 
             	newurl.innerHTML = url + " " + rankglobal;
             	urlslayout += newurl.outerHTML;
-            	console.log(urlslayout);
-
-                if (i == propertyurls.length -1) {
-                    propurls.innerHTML = urlslayout;
-                }
-
             }
+            
+            propurls.innerHTML = urlslayout;
+
+
 
         }
     });
