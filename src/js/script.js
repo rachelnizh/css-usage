@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             //PROPERTY COUNT DATA
-            propcount.innerHTML = prop.count;
+            propcount.innerHTML = prop.totalUniqueCount;
 
             //PROPERTY PERCENTAGE DATA
         	var ppercent = Math.round(prop.percentage*100); //converting to percentage rather decimal by *100
