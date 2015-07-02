@@ -10,9 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var proptrend = document.getElementById("prop-trends");
     var proppercent = document.getElementsByClassName("prop-percent");
     var propurls = document.getElementById("prop-urls");
+    var propranks = document.getElementById("prop-ranks");
     var propcount = document.getElementById('prop-count');
     var propertyname = document.getElementsByClassName('property-name');
 
+    
     //PROPERTY NAMES NAVIGATION
     props.forEach(function(prop) {
         var newprop = document.createElement("li");       
@@ -21,9 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         //newprop.innerHTML = '<a href="./index.html?prop=' + prop.name + '">' + prop.name + " " + ppercent + "%" + '</a>';
         newprop.setAttribute("id", prop.name);
         propertynav.appendChild(newprop);      
-
-        //load display be default
-        //window.location.href = "./index.html/#display";
 
         //Prevent page jumping when property is clicked
         document.getElementById(prop.name).addEventListener("click", function(stopJump) {
@@ -69,42 +68,80 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             //VALUES DATA
+		    //HIGHCHARTS PIE GRAPH
+		    var options = {
+			    chart: {
+			        renderTo: 'pie-chart',
+			        type: 'pie'
+			    },
+		        title: {
+		            text: " "
+		        },		
+		        tooltip: {
+            		pointFormat: '<b>{point.percentage:.1f}%</b>'
+        		},	 
+        		plotOptions: {
+        			pie: {
+        				allowPointSelect: true,
+        				dataLabels: {
+        					distance: 50,
+        					enabled: true,
+        				    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        				}
+        			}
+        		},   
+			    series: [{
+			    }]
+			};
+            
             //Variable to keep propvalues empty so it doesn't append when a new prop is clicked
             var propertyvalues = prop.values;
-            var valuelayout = ""; 
+			var piechartobjects = [];            			
 
             //Add property values to prop-values list or graph
             for (var i = 0; i < propertyvalues.length; i++) {
                 var valuename = prop.values[i].name;
-                var valuecount = prop.values[i].count;
                 var valuepercentage = (Math.round(prop.values[i].percentage*100)); //converting to percentage rather decimal by *100
+                var valuecount = prop.values[i].count;
                 var valuetrend = prop.values[i].trend;
-                var newvalue = document.createElement("li");
+                var piechartobject = {};
 
-                //Put data inside newvalue li
-                newvalue.innerHTML = valuename + " " + valuepercentage + "%";
-                //Concat value data
-                valuelayout += newvalue.outerHTML;
+				piechartobject['name'] = valuename;
+				piechartobject['y'] = valuepercentage;
+
+				piechartobjects[i]  = piechartobject;
+
             }
 
-            propvalues.innerHTML = valuelayout;
+			options.series.push({
+			    data: piechartobjects
+			});
+
+			$(document).ready(function() {
+			    var chart = new Highcharts.Chart(options);
+			});
 
             //URLS DATA
             var propertyurls = prop.urls;
             var urlslayout = "";
+            var ranklayout = "";
 
             for (var i=0; i < 10; i++) {
             	var url = prop.urls[i].url;
             	var rankglobal = prop.urls[i].rankGlobal;
-            	var newurl = document.createElement("li");
 
-            	newurl.innerHTML = url + " " + rankglobal;
+            	var newurl = document.createElement("li");
+            	var newrank = document.createElement("li");
+
+            	newrank.innerHTML = rankglobal;
+            	newurl.innerHTML = url;
+
+            	ranklayout += newrank.outerHTML;
             	urlslayout += newurl.outerHTML;
             }
             
+            propranks.innerHTML = ranklayout;
             propurls.innerHTML = urlslayout;
-
-
 
         }
     });

@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <title></title>
 
-    <!-- NORMALIZE -->
-	<link type="text/css" href="external/normalize.css" media="all" rel="stylesheet" />
 	<!-- UNIVERSAL STYLES (REQUIRED) -->
 	<link rel="stylesheet" href="external/edgecore/base.css"/>
 	<link rel="stylesheet" href="external/edgecore/type.css"/>
@@ -34,22 +32,29 @@
 	<link rel="stylesheet" href="external/edgecore/color.css"/>
 	<link rel="stylesheet" href="external/edgecore/helpers.css"/>
 
-	<!-- HIGH CHARTS -->
-	<script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+	<!-- HIGH CHARTS AND JQUERY -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>	
 
 	<!-- MY SCRIPT -->
-  	<script src="src/js/script.js"></script>
-  	<!-- <link type="text/css" href="src/scss/style.css" media="all" rel="stylesheet" /> -->
+  	<script src="src/script.js"></script>
+  	<link type="text/css" href="src/style.css" media="all" rel="stylesheet" />
 
 </head>
 <body>
 <section class="container">
 	<div class="layout layout--sidebar">
-		<div class="module module--secondary">
+		<div class="module module--secondary sidebar">
+		<div data-win-control="WinJS.UI.AutoSuggestBox" data-win-options="{
+	        placeholderText: 'Type a city',
+	        onsuggestionsrequested: Sample.suggestionsRequestedHandler,
+	        onquerysubmitted: Sample.querySubmittedHandler
+	    	}">
+    	</div>
 			<ul id="props" class="list--links">
 			</ul>
 		</div><!--nav-->
-		<div class="module module--primary">
+		<div class="module module--primary main">
 			<h1 class="property-name"></h1>
 			<h3>We found <span id="prop-count"></span> websites that are using the <span class="property-name"></span> property. That's <span class="prop-percent"></span>% of websites.</h3>
 			<h3>Trend</h3>
@@ -58,9 +63,23 @@
 			<h3>Values</h3>
 				<ul id="prop-values">
 				</ul>
+				<div id="pie-chart">
+				</div>
 			<h3>Top URLs using <span class="property-name"></span></h3>
-				<ol id="prop-urls">
-				</ol>			
+				<div class="urls-container">
+					<div class="propranks">
+						<h5>Rank</h5>
+						<ul id="prop-ranks">
+						</ul>
+					</div>
+					
+					<div class="propurls">
+					<h5>URL</h5>
+						<ul id="prop-urls">
+						</ul>
+					</div>
+
+				</div>
 		</div><!--module primary-->
 	</div><!--layout-->
 </section><!--container-->

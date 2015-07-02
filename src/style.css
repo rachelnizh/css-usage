@@ -1,0 +1,60 @@
+
+@media (min-width: 60em) {
+
+  	/* Sidebar */
+	.sidebar {
+		display: block;
+		height: 100%;
+		width: 20rem;
+		border-right: 1px solid hsla(0, 0%, 0%, .1);
+		padding: 2rem 2.4rem 4.8rem;
+		overflow-y: auto;
+	}
+	/* Main */
+	.main {
+		padding: 2rem 2.4rem 4.8rem;	
+	}
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.urls-container {
+	width: 38%;
+}
+
+ul, ol {
+	list-style-type: none;
+	margin: 0;
+}
+
+ul#props li a {
+	color: rgba(0,0,0,.6);
+}
+
+.propurls {
+	float: right;
+	margin: 0;
+	max-width: 85%;
+}
+
+.propranks {
+	float: left;
+	margin: 0;
+	max-width: 15%;
+}
+
+#pie-chart {
+	width:60rem; 
+	height:400px;
+}
+
+text {
+	  font: 400 100%/1 "Segoe UI Webfont", "Segoe UI", Segoe, 'Segoe WP', "Lucida Grande", "Lucida Sans", Tahoma, Verdana, Arial, sans-serif;
+}
